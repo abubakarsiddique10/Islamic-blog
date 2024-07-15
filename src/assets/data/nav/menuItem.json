@@ -1,0 +1,26 @@
+[
+    {
+        "name": "হোম",
+        "link": "index.html"
+    },
+    {
+        "name": "নামাজ",
+        "link": "./namaz-categories.html"
+    },
+    {
+        "name": "Speaking",
+        "link": "./speaking.html"
+    },
+    {
+        "name": "Reading",
+        "link": "./reading.html"
+    },
+    {
+        "name": "Writing",
+        "link": "./writing.html"
+    },
+    {
+        "name": "Listening",
+        "link": "./listening.html"
+    }
+]

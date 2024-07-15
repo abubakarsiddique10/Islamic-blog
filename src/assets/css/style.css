@@ -1,0 +1,139 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Saira+Stencil+One&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Saira+Stencil+One&display=swap'); */
+
+ 
+/* 01. common */
+:root {
+    --color-primary: #FFB400;
+    --color-secondary: rgb(18 23 42/1);
+    --color-text: rgb(211 216 232/1);
+    --color-body: rgb(255 255 255);
+    --color-black-100: #2B2B2B;
+    --color-black-200: #18191A;
+    --color-gray-100: #767676;
+    --color-gray-200: #3A3B3C;
+    --color-white-100: #FFFFFF;
+    --color-border-1: rgba(71,85,105,.1);
+    --color-border-2: rgb(38 43 66/1);
+    --font-primary: "Inter", sans-serif;
+    --banner-title: 50px;
+    --header-title: 30px;
+    --header-subtitle: 14px;
+    --color-banner-gradient: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    font-style: normal;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.section__header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 02. header */
+#header {
+    z-index: 100;
+}
+.header__bg {
+    border-bottom: 1px solid rgba(71, 85, 105, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px)
+}
+.navbar {
+    padding: 13px 0;
+}
+.nav-link:hover {
+    color: var(--color-black-100)
+}
+.nav-active {
+    color: var(--color-black-100)
+}
+.navbar-brand {
+    font-family: "Saira Stencil One", sans-serif;
+}
+.navbar-brand svg {
+    height: 32px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+#close-menu {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+
+/* 03. banner */
+#banner {
+   border-bottom: 1px solid #8080803b;
+   background: var(--color-banner-gradient);
+  /*  background-image: url(../images/banner/banner.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh; */
+}
+.banner {
+    height: calc(100vh - 1px);
+}
+.banner__title {
+    font-size: var(--banner-title);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.banner__title span {
+    color: var(--color-primary);
+}
+.banner__description {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.45px;
+    margin-bottom: 35px;
+}
+.banner__btn span {
+    color: var(--color-black-100, #2B2B2B);
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.banner__left {
+    max-width: 625px;
+    -webkit-max-width: 625px;
+}
+.banner__right {
+   max-width: 420px;
+   max-height: 450px;
+}
+.banner__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: transparent;
+    border: 1.5px solid var(--color-border-1);
+}
+
+
+.active {
+    background-color: #f8fafc
+}

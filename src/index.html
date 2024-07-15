@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f23b08ee3a.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon/fav-icon.png">
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <title>Islamic Blog</title>
+
+</head>
+
+<body>
+    <header id="header" class="fixed w-full top-0">
+        <div class="container">
+            <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <a class="navbar-brand text-2xl leading-none font-normal z-10 not-italic"
+                            href="index.html">Islamic Blog</a>
+                    </div>
+                    <button class="navbar-toggler p-0 border-0 lg:hidden" type="button">
+                        <img id="open-menu" src="./assets/images/icons/open-menu.svg" alt="">
+                        <img id="close-menu" src="./assets/images/icons/close-menu.svg" alt="">
+                    </button>
+                </div>
+                <div class="hidden lg:block nav__items font-siliguri">
+                    <ul id="menuItem" class=" flex flex-col lg:flex-row gap-2 lg:gap-0">
+                        <!-- menu item will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =======================
+            Hero Start -->
+        <section id="banner">
+            <div class="container">
+                <div
+                    class=".banner h-auto pt-20 pb-[100px] lg:full-height flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-20">
+                    <div class="banner__left">
+                        <h1 class="banner__title text-center lg:text-left">Hi, I’m Abu Bakar<br>
+                            <span>Front-End</span> Developer
+                        </h1>
+                        <p class="banner__description lg:pr-8 xl:pr-0 text-center lg:text-left ">My name is abu bakar. I
+                            am a front-end developer. I love to work with react js. over the last year, I gather
+                            knowledge
+                            in various parts of web development by myself. I always try to improve my skills and
+                            knowledge base to fit with the
+                            latest technologies. My goal is to become a full-stack web developer who can make beautiful
+                            UI.
+                        </p>
+                        <div class="social__area">
+                            <h6>Please follow me</h6>
+                            <div class="social__icon">
+                                <a class="social__link" href="https://www.facebook.com/md.bakkar.129357">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a class="social__link" href="https://github.com/abubakarsiddique10">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a class="social__link"
+                                    href="https://www.linkedin.com/in/muhammad-abu-bakar-a283b4241/">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <div class="social__link relative email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span class="absolute bottom-[-25px] left-[-5px] hidden copy-text">copied</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__right">
+                        <img src="./assets/images/banner/banner-img.png" alt="banner-img">
+                    </div>
+                </div>
+            </div>
+            <!-- <p>نَوَيْتُ اَنْ اُصَلِّيَ لِلَّهِ تَعَالَى رَكْعَتَيِ صَلَاةِ الْفَجْرِ سُنَّةً لِلَّهِ تَعَالَى
+                مُتَوَجِّهًا إِلَى جِهَةِ
+                الْكَعْبَةِ الشَّرِيفَةِ اللهُ أَكْبَرُ
+            </p> -->
+        </section>
+        <!-- =======================
+            Hero End -->
+    </main>
+    <script src="./assets/js/index.js" type="module"></script>
+    <script src="./assets/js/common.js" type="module"></script>
+</body>
+
+</html>
