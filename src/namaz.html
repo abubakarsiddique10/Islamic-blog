@@ -39,28 +39,59 @@
     <main>
         <section class="">
             <div class="container xl:!px-0 relative">
-                <div class="mt-14 flex flex-row-reverse justify-evenly ">
-                    <ul id="tags" class="w-full max-w-[368px] border-l pl-10  h-full min-h-10 sticky top-24">
+                <div class="mt-14 md:flex flex-row-reverse justify-evenly pt-6 ">
+                    
+
+                    <ul id="tags" class="w-full max-w-[368px] border-l md:pl-5 lg:pl-10  h-full min-h-10 sticky top-24 hidden md:block">
                        <li>
-                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] active block text-sm w-full filter-button" data-type="all">Shob namaze</button>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] active block w-full filter-button" data-type="all">সব নামাজের নিয়ত</button>
                        </li>
                        <li>
-                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block text-sm w-full filter-button" data-type="fazr">ফজরের নামায</button>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button" data-type="fajr">ফজরের নামাযের নিয়ত</button>
                        </li>
                        <li>
-                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block text-sm w-full filter-button"  data-type="magrib">মাগরিবের নামায</button>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="zuhr">যোহরের নামাযের নিয়ত</button>
+                       </li>
+                       <li>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="asr">আসররের নামাযের নিয়ত</button>
+                       </li>
+                       <li>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="magrib">মাগরিবের নামাযের নিয়ত</button>
+                       </li>
+                       <li>
+                            <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="isha">এশার নামাযের নিয়ত</button>
                        </li>
                        
                     </ul>
 
-                    <div id="namaz__niyat" class="max-w-[506px]">
+                    <ul id="mobile__tags" class="flex md:hidden overflow-auto">
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] active block w-full filter-button" data-type="all">সব নামাজের নিয়ত</button>
+                        </li>
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button" data-type="fajr">ফজরের নামাযের নিয়ত</button>
+                        </li>
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="zuhr">যোহরের নামাযের নিয়ত</button>
+                        </li>
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="asr">আসররের নামাযের নিয়ত</button>
+                        </li>
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="magrib">মাগরিবের নামাযের নিয়ত</button>
+                        </li>
+                        <li class="min-w-fit">
+                             <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#000000cc] block w-full filter-button"  data-type="isha">এশার নামাযের নিয়ত</button>
+                        </li>
+                     </ul>
+
+                    <div id="namaz__niyat" class="max-w-[516px] mx-auto md:mx-left pr-4 lg:p-0">
                         
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <script src="./assets/js/index.js" type="module"></script>
     <script src="./assets/js/namaz.js" type="module"></script>
 </body>
