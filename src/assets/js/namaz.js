@@ -6,8 +6,9 @@ async function getNamazNiyat() {
     const url = `././assets/data/namaz/niyat.json`;
     try {
         const namazNiyat = await fetchData(url);
-        namazNiyatData = namazNiyat;
-        displayNamazNiyat(namazNiyat)
+        namazNiyatData = namazNiyat[1];
+        displayNamazNiyat(namazNiyat[1]);
+        displayTag(namazNiyat[0])
     } catch (error) {
         console.error('Error fetching Namaz Niyat data:', error);
     }
@@ -58,7 +59,6 @@ function handleTagClick(event) {
         const filterData = dataType === "all" 
             ? namazNiyatData 
             : namazNiyatData.filter((data) => data.tags === dataType);
-
         displayNamazNiyat(filterData);
     }
 }
@@ -67,7 +67,28 @@ function handleTagClick(event) {
 const tags = document.getElementById('tags');
 const mobileTags = document.getElementById('mobile__tags');
 tags.addEventListener('click', handleTagClick);
-mobileTags.addEventListener('click', handleTagClick);
+/* mobileTags.addEventListener('click', handleTagClick); */
 
 // Fetch Namaz Niyat data on page load
 getNamazNiyat();
+
+
+
+
+const displayTag = (contents) => {
+    const tagUl = document.getElementById('tags');
+    contents.forEach((content, index) => {
+        const createTagCard = createTagElemnt(content, index === 0);
+        tagUl.appendChild(createTagCard);
+     })
+}
+
+
+const createTagElemnt = ({content, dataType}, isActive) => {
+    const li = document.createElement('li');
+    li.className = 'min-w-fit'
+    li.innerHTML = `
+        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#080404cc] block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${content}</button>
+    `
+    return li
+}

@@ -120,6 +120,6 @@ body {
     background-color: #f8fafc
 }
 
-#mobile__tags::-webkit-scrollbar {
+#tags::-webkit-scrollbar {
     display: none;
 }
