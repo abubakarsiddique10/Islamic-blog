@@ -1,9 +1,11 @@
 import { fetchData } from "./common.js";
+const queryParams = new URLSearchParams(window.location.search);
+const category = queryParams.get('category');
 let namazNiyatData = null
 
 // Fetch Namaz Niyat data
 async function getNamazNiyat() {
-    const url = `././assets/data/namaz/niyat.json`;
+    const url = `././assets/data/namaz/${category}.json`;
     try {
         const namazNiyat = await fetchData(url);
         namazNiyatData = namazNiyat[1];
@@ -20,12 +22,12 @@ const displayNamazNiyat = (namazNiyat) => {
     let niyatContainer = document.getElementById('namaz__niyat');
     niyatContainer.innerText = "";
 
-    namazNiyat.forEach(({namazName, contents}) => {
+    namazNiyat.forEach(({title, contents}) => {
         const niyatCard = document.createElement('div');
-        const title = document.createElement('h2');
-        title.className = 'text-xl font-semibold text-center mt-10';
-        title.innerText = namazName;
-        niyatCard.appendChild(title);
+        const headingTwo = document.createElement('h2');
+        headingTwo.className = 'text-xl font-semibold text-center mt-10';
+        headingTwo.innerText = title;
+        niyatCard.appendChild(headingTwo);
 
         contents.forEach((content) => {
            const createNiyatCard = createNamazNiyatCard(content);
@@ -36,12 +38,12 @@ const displayNamazNiyat = (namazNiyat) => {
 }
 
 // Create a Namaz Niyat card element
-const createNamazNiyatCard = ({ title, niyatArabic, pronunciation }) => {
+const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     const niyatCard = document.createElement('div');
     niyatCard.className = 'py-6 border-b border-[#f2f2f2]';
     niyatCard.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-left">${title}</h3>
-        <p class="text-xl mb-2 font-semibold" dir="rtl">${niyatArabic}</p>
+        <h3 class="text-lg font-semibold mb-3 text-left">${subtitle}</h3>
+        <p class="text-xl mb-2 font-semibold" dir="rtl">${arabic}</p>
         <p><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return niyatCard
@@ -56,22 +58,18 @@ function handleTagClick(event) {
         event.target.classList.add('active');
 
         const dataType = event.target.dataset.type;
+        console.log(dataType)
         const filterData = dataType === "all" 
             ? namazNiyatData 
-            : namazNiyatData.filter((data) => data.tags === dataType);
+            : namazNiyatData.filter((data) => data.tag === dataType);
         displayNamazNiyat(filterData);
     }
 }
 
 // Add event listener for tag clicks
 const tags = document.getElementById('tags');
-const mobileTags = document.getElementById('mobile__tags');
 tags.addEventListener('click', handleTagClick);
 /* mobileTags.addEventListener('click', handleTagClick); */
-
-// Fetch Namaz Niyat data on page load
-getNamazNiyat();
-
 
 
 
@@ -84,11 +82,15 @@ const displayTag = (contents) => {
 }
 
 
-const createTagElemnt = ({content, dataType}, isActive) => {
+const createTagElemnt = ({tagName, dataType}, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#080404cc] block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${content}</button>
+        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#080404cc] block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }
+
+
+// Fetch Namaz Niyat data on page load
+getNamazNiyat();

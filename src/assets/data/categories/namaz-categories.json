@@ -3,5 +3,15 @@
         "name": "নামাজের নিয়ত",
         "dataValue": "niyat",
         "img": "birds"
+    },
+    {
+        "name": "নামাজের তাসবিহ ও দোয়া",
+        "dataValue": "tasbih-dowa",
+        "img": "birds"
+    },
+    {
+        "name": "সুরা সমূহ",
+        "dataValue": "surah",
+        "img": "birds"
     }
 ]
