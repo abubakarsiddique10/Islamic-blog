@@ -24,14 +24,14 @@ function displayCategories(catagories) {
 // Function to create a category card element
 function createCategoryCard({ name, img, dataValue }) {
     const categoryCard = document.createElement('div');
-    categoryCard.classList = 'category-card flex items-center gap-1.5 shadow-3xl px-1 pr-1.5 sm:pr-1 cursor-pointer select-none';
+    categoryCard.classList = 'category-card flex items-center gap-4 shadow-3xl cursor-pointer select-none min-w-fit px-3 py-1.5';
     categoryCard.setAttribute('data-type', `${dataValue}`);
 
     categoryCard.innerHTML = `
-    <figure class="w-12 h-12 flex items-center justify-center rounded">
+    <figure class="flex items-center justify-center rounded">
         <img class="w-8" src="./assets/images/icons/${img}.svg" />
     </figure>
-    <h3 class="font-semibold leading-6 text-xl font-['Hind_Siliguri'] text-[#363637] capitalize">
+    <h3 class="font-semibold leading-6 text-lg font-siliguri text-secondary-200 capitalize">
     ${name}
     </h3>
     `

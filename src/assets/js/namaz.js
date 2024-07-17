@@ -42,9 +42,9 @@ const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     const niyatCard = document.createElement('div');
     niyatCard.className = 'py-6 border-b border-[#f2f2f2]';
     niyatCard.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-left">${subtitle}</h3>
-        <p class="text-xl mb-2 font-semibold" dir="rtl">${arabic}</p>
-        <p><strong>উচ্চারণঃ </strong>${pronunciation}</p>
+        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${subtitle}</h3>
+        <p class="text-xl mb-2 font-semibold text-secondary-100" dir="rtl">${arabic}</p>
+        <p class="font-medium text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return niyatCard
 }
@@ -86,11 +86,10 @@ const createTagElemnt = ({tagName, dataType}, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-[#080404cc] block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
+        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }
-
 
 // Fetch Namaz Niyat data on page load
 getNamazNiyat();

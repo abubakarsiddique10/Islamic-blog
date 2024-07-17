@@ -13,6 +13,12 @@ module.exports = {
       fontFamily: {
         'siliguri': ['"Hind Siliguri"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        secondary: {
+            100: '#242424',
+            200: '#080404cc',
+          },
+      }
     }
   },
   plugins: [],
