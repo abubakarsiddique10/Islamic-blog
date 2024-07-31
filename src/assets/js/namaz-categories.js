@@ -1,4 +1,5 @@
 import { fetchData } from "./common.js";
+import { loading } from "./index.js";
 
 const categoriesContainer = document.getElementById('categories');
 // Function to fetch and display vocabulary categories
@@ -6,7 +7,8 @@ async function fetchCategories() {
     const url = `././assets/data/categories/namaz-categories.json`;
     try {
         const categories = await fetchData(url);
-        displayCategories(categories)
+        displayCategories(categories);
+        loading(false)
     } catch (error) {
         console.error('Error fetching categories:', error);
     }

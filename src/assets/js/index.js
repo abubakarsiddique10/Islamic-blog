@@ -63,10 +63,9 @@ const displayMenuItem = (menuItem) => {
 // Create a menu element
 const createMenuItem = (item) => {
     const li = document.createElement('li');
-    li.classList.add('nav-item')
+    li.className = 'nav-item'
     li.innerHTML = `
-        <a class="capitalize font-siliguri font-medium py-2 px-4 rounded-md leading-5 text-[15px] text-[#000000cc] tracking-[-0.45px] nav-active" aria-current="page" href="${item.link}">
-                ${item.name}
+        <a class="capitalize font-siliguri font-medium py-2 lg:py-0 rounded-md leading-5 text-[15px] text-[#000000cc] tracking-[-0.45px] nav-active block" aria-current="page" href="${item.link}">${item.name}
         </a>
     `;
     return li
@@ -74,45 +73,11 @@ const createMenuItem = (item) => {
 /* NAVBAR END */
 
 
-/* const isActive = true
-const num = 1;
 
-const food = (isActive) ? "Birany" : "Cha";
-const food2 = null || "hello"
-console.log(food2) */
-
-
-
-/* function second() {
-    console.log('I am second')
+// loading sppiner
+function loading (value) {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add(`${!value && "hidden"}`)
 }
-
-function first() {
-    console.log('I am first');
-    setTimeout(second, 1000);
-    console.log('Hello')
-}
-first() */
-
-/* setTimeout(() => {
-    console.log('Hello time')
-}, 0);
-
-const isActive = true
-const newPromise = new Promise((resolve, reject) => {
-    if (isActive) {
-        resolve('Active')
-    } else {
-        reject('not active')
-    }
-})
-
-
-newPromise
-    .then((res) => console.log(res))
-    .catch((res) => console.log(res))
-
-
-
-console.log('Hell world') */
+export {loading}
 

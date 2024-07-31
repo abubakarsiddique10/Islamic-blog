@@ -1,0 +1,46 @@
+[
+    [
+        {"tagName": "সব নামাজ", "dataType": "link"}
+    ],
+    [
+            {
+                "id": 1,
+                "title": "How to Write Clean Code",
+                "publicationDate": "Apr 20, 2024",
+                "readingTime": "10 min read",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla. Nulla sollicitudin, neque nec vulputate consectetur, metus odio mattis justo, nec vehicula odio ipsum vitae odio. Proin maximus ex at commodo volutpat. Cras eu purus in ex tempus tempor. Nam eget nisl a est hendrerit iaculis. Vivamus id vestibulum libero. Pellentesque habitant morbi tristique senectus et</p> <p>netus et malesuada fames ac turpis egestas. Morbi mollis, odio sit amet bibendum dapibus, purus ligula efficitur ex, nec ultricies arcu libero vitae leo. In vitae metus ut nunc varius interdum. Nulla facilisi. Suspendisse potenti. Fusce id mi nec sem ultricies ultrices Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur dicta accusantium, mollitia dolorum fugit recusandae molestiae doloribus molestias aut saepe quam repellendus odio  aliquam.</p> ",
+                "tags": [
+                    "programming",
+                    "clean-code",
+                    "software-development"
+                ],
+                "blogImg": "./assets/images/blog/blog.webp"
+            },
+            {
+                "id": 1,
+                "title": "How to Write Clean Code",
+                "publicationDate": "Apr 20, 2024",
+                "readingTime": "10 min read",
+                "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla. Nulla sollicitudin, neque nec vulputate consectetur, metus odio mattis justo, nec vehicula odio ipsum vitae odio. Proin maximus ex at commodo volutpat. Cras eu purus in ex tempus tempor. Nam eget nisl a est hendrerit iaculis. Vivamus id vestibulum libero. Pellentesque habitant morbi tristique senectus et</p> <p>netus et malesuada fames ac turpis egestas. Morbi mollis, odio sit amet bibendum dapibus, purus ligula efficitur ex, nec ultricies arcu libero vitae leo. In vitae metus ut nunc varius interdum. Nulla facilisi. Suspendisse potenti. Fusce id mi nec sem ultricies ultrices Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur dicta accusantium, mollitia dolorum fugit recusandae molestiae doloribus molestias aut saepe quam repellendus odio  aliquam.</p> ",
+                "tags": [
+                    "programming",
+                    "clean-code",
+                    "software-development"
+                ],
+                "blogImg": "./assets/images/blog/blog.webp"
+            },
+            {
+                "id": 2,
+                "title": "How to Write Clean Code 2",
+                "publicationDate": "Apr 20, 2024",
+                "readingTime": "10 min read",
+                "content": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur dicta accusantium, mollitia dolorum fugit recusandae molestiae doloribus molestias aut saepe quame repellendus odio aliquam.</p> <h3>This is blog Title</h3><ol> <li>hello world</li> <li>hello world2</li> </ol>",
+                "tags": [
+                    "programming",
+                    "clean-code",
+                    "software-development"
+                ],
+                "blogImg": "./assets/images/blog/blog.webp"
+            }
+    ]
+]

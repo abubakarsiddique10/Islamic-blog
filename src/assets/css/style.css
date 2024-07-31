@@ -24,7 +24,7 @@ body {
 .container {
     width: 100%;
     max-width: 1200px;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 .section__header{
@@ -123,3 +123,18 @@ body {
 #tags::-webkit-scrollbar {
     display: none;
 }
+
+
+/* blog css start */
+#blog_details ol {
+    list-style: decimal;
+    margin-left: 16px;
+}
+#blog_details p {
+    margin-bottom: 8px;
+}
+#blog_details h3 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+/* blog css end */

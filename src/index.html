@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <header id="header" class="fixed w-full top-0">
-        <div class="container">
+    <header id="header" class="fixed w-full top-0 border-b z-10">
+        <div class="container xl:!px-0">
             <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
@@ -28,7 +28,7 @@
                     </button>
                 </div>
                 <div class="hidden lg:block nav__items font-siliguri">
-                    <ul id="menuItem" class=" flex flex-col lg:flex-row gap-2 lg:gap-0">
+                    <ul id="menuItem" class=" flex flex-col lg:flex-row lg:space-x-8">
                         <!-- menu item will be dynamically inserted here -->
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
     <main>
         <!-- =======================
             Hero Start -->
-        <section id="banner">
+        <!-- <section id="banner">
             <div class="container">
                 <div
                     class=".banner h-auto pt-20 pb-[100px] lg:full-height flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-20">
@@ -79,16 +79,47 @@
                     </div>
                 </div>
             </div>
-            <!-- <p>نَوَيْتُ اَنْ اُصَلِّيَ لِلَّهِ تَعَالَى رَكْعَتَيِ صَلَاةِ الْفَجْرِ سُنَّةً لِلَّهِ تَعَالَى
-                مُتَوَجِّهًا إِلَى جِهَةِ
-                الْكَعْبَةِ الشَّرِيفَةِ اللهُ أَكْبَرُ
-            </p> -->
-        </section>
+        </section> -->
         <!-- =======================
             Hero End -->
+
+        <section>
+            <div class="container xl:!px-0">
+                <div class="lg:mt-14 lg:flex flex-row-reverse justify-between pt-10 lg:pt-0">
+                    
+                    <ul id="tags" class="max-w-[518px] sticky top-16 flex lg:block overflow-auto pt-6 lg:pt-10 w-full lg:max-w-[368px] lg:border-l lg:h-full lg:pl-10 lg:min-h-10 bg-slate-400">
+                        <!-- Category tags will be dynamically inserted here -->
+                    </ul>
+
+                    <div id="blog" class="w-full max-w-[728px] mt-5">
+                        <article class="blog__card border-b py-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <div>
+                                    <h2 class="text-xl font-extrabold pb-2">The Future of Artificial Intelligence</h2>
+                                    <p class="text-secondary-100">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur dicta accusantium, mollitia dolorum fugit recusandae molestiae doloribus molestias aut saepe quame repellendus odio aliquam.</p>
+                                </div>
+                                <div class="w-full max-w-28 h-28 ml-14">
+                                    <img class="w-full h-full object-cover" src="../src/assets/images/blog/blog.webp" alt="img" />
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <span>20 Jun 2024</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- loading sppiner -->
+    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] flex justify-center items-center">
+        <span>Loading...</span>
+    </div>
+
     <script src="./assets/js/index.js" type="module"></script>
     <script src="./assets/js/common.js" type="module"></script>
+    <script src="./assets/js/blog.js" type="module"></script>
 </body>
 
 </html>

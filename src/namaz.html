@@ -13,43 +13,48 @@
 </head>
 
 <body class="overflow-y-scroll">
-    <header id="header" class="fixed w-full top-0 border-b">
+    <header id="header" class="fixed w-full top-0 border-b z-10">
         <div class="container xl:!px-0">
             <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <a class="navbar-brand text-2xl leading-none font-normal z-10 not-italic"
-                            href="index.html">English
-                            Infinity</a>
+                        <a class="navbar-brand text-2xl leading-none font-bold z-10"
+                            href="index.html">Islamic Blog</a>
                     </div>
                     <button class="navbar-toggler p-0 border-0 lg:hidden" type="button">
                         <img id="open-menu" src="./assets/images/icons/open-menu.svg" alt="">
                         <img id="close-menu" src="./assets/images/icons/close-menu.svg" alt="">
                     </button>
                 </div>
-                <div class="hidden lg:block nav__items">
-                    <ul id="menuItem" class="flex flex-col lg:flex-row gap-2 lg:gap-0">
+                <div class="hidden lg:block nav__items font-siliguri">
+                    <ul id="menuItem" class=" flex flex-col lg:flex-row lg:space-x-8">
                         <!-- menu item will be dynamically inserted here -->
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+
     <main>
         <section class="">
             <div class="container xl:!px-0">
-                <div class="md:mt-14 md:flex flex-row-reverse justify-evenly pt-10 md:pt-0">
+                <div class="lg:mt-14 lg:flex flex-row-reverse justify-evenly pt-10 lg:pt-0">
                     
-                    <ul id="tags" class="max-w-[518px] mx-auto bg-white sticky top-14 flex md:block overflow-auto pt-6 md:pt-10  md:w-full md:max-w-[200px] lg:max-w-[368px] md:border-l md:pl-4 lg:pl-10 md:h-full md:min-h-10">
-                       
+                    <ul id="tags" class="max-w-[518px] mx-auto bg-white sticky top-14 flex lg:block overflow-auto pt-6 lg:pt-10 w-full lg:max-w-[368px] lg:border-l lg:h-full lg:pl-10 lg:min-h-10">
+                       <!-- Category tags will be dynamically inserted here -->
                     </ul>
-                    <div id="namaz__niyat" class="w-full max-w-[516px] mx-auto lg:mx-left md:pr-4 lg:pr-0">
+                    <div id="namaz" class="w-full max-w-[516px] mx-auto lg:mx-left overflow-hidden">
                         
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] flex justify-center items-center">
+        <span>Loading...</span>
+    </div>
+
     <script src="./assets/js/index.js" type="module"></script>
     <script src="./assets/js/namaz.js" type="module"></script>
 </body>

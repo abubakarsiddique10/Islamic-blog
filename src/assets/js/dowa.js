@@ -1,50 +1,40 @@
 import { fetchData } from "./common.js";
-import { loading } from "./index.js";
 const queryParams = new URLSearchParams(window.location.search);
 const category = queryParams.get('category');
-let namazNiyatData = null
+let allDowa = null
 
 // Fetch Namaz Niyat data
-async function getNamazData() {
-    const url = `././assets/data/namaz/${category}.json`;
+async function getData() {
+    const url = `././assets/data/dowa/dowa.json`;
     try {
-        const namazData = await fetchData(url);
-        namazNiyatData = namazData[1];
-        displayNamazData(namazData[1]);
-        displayTag(namazData[0])
-        loading(false)
+        const response = await fetchData(url);
+        const [tags, contents] = response;
+        allDowa = contents;
+        displayDowa(contents);
+        displayTag(tags)
     } catch (error) {
-        console.error('Error fetching Namaz Niyat data:', error);
+        console.error( error);
     }
 }
 
 
 // Display Namaz Niyat data in the UI
-const displayNamazData = (namazData) => {
-    let namazContainer = document.getElementById('namaz');
+const displayDowa = (namazData) => {
+    let namazContainer = document.getElementById('dowa');
     namazContainer.innerText = "";
 
-    namazData.forEach(({title, contents}) => {
-        const categoryCard = document.createElement('div');
-        const headingTwo = document.createElement('h2');
-        headingTwo.className = 'text-xl font-semibold text-center mt-10';
-        headingTwo.innerText = title;
-        categoryCard.appendChild(headingTwo);
-
-        contents.forEach((content) => {
-           const createNiyatCard = createNamazNiyatCard(content);
-           categoryCard.appendChild(createNiyatCard);
-        })
-        namazContainer.appendChild(categoryCard)
+    namazData.forEach((data) => {
+        const createNiyatCard = createDowaCard(data);
+        namazContainer.appendChild(createNiyatCard)
     });
 }
 
 // Create a Namaz Niyat card element
-const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
+const createDowaCard = ({ title, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'py-6 border-b border-[#f2f2f2]';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${subtitle}</h3>
+        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${title}</h3>
         <p class="text-xl mb-2 font-medium md:font-semibold text-secondary-100" dir="rtl">${arabic}</p>
         <p class="font-normal md:font-medium text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
@@ -61,9 +51,9 @@ function handleTagClick(event) {
 
         const dataType = event.target.dataset.type;
         const filterData = dataType === "all" 
-            ? namazNiyatData 
-            : namazNiyatData.filter((data) => data.tag === dataType);
-            displayNamazData(filterData);
+            ? allDowa 
+            : allDowa.filter((data) => data.tag === dataType);
+            displayDowa(filterData);
     }
 }
 
@@ -92,4 +82,4 @@ const createTagElemnt = ({tagName, dataType}, isActive) => {
 }
 
 // Fetch Namaz Niyat data on page load
-getNamazData();
+getData();

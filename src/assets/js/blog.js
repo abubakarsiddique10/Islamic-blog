@@ -1,24 +1,67 @@
-import { fetchData } from "./common.js";
+import {fetchData} from "./common.js";
 import { loading } from "./index.js";
-const queryParams = new URLSearchParams(window.location.search);
-const category = queryParams.get('category');
-let namazNiyatData = null
-
+/* const preloader = document.getElementById('preloader'); */
 // Fetch Namaz Niyat data
-async function getNamazData() {
-    const url = `././assets/data/namaz/${category}.json`;
+async function getBlogData() {
+    const url = `././assets/data/blogs/blogs.json`;
     try {
-        const namazData = await fetchData(url);
-        namazNiyatData = namazData[1];
-        displayNamazData(namazData[1]);
-        displayTag(namazData[0])
+        const response = await fetchData(url);
+        displayBlog(response[1]);
         loading(false)
     } catch (error) {
         console.error('Error fetching Namaz Niyat data:', error);
     }
 }
+getBlogData()
+
+// Display Namaz Niyat data in the UI
+const displayBlog = (contents) => {
+    let blogContainer = document.getElementById('blog');
+    contents.forEach((content) => {
+        const createBLogCard = createArticleCard(content);
+        blogContainer.appendChild(createBLogCard);
+    });
+    setupCategoryClickListener()
+}
 
 
+// Create a article card element
+const createArticleCard = ({id, title, content, blogImg, publicationDate }) => {
+    const cardElement = document.createElement('article');
+    cardElement.className = 'blog__card border-b py-6 cursor-pointer';
+    cardElement.setAttribute('data-id', `${id}`)
+    cardElement.innerHTML = `
+        <div class="flex items-center justify-between">
+            <div>
+                <h2 class="text-xl font-extrabold pb-2">${title}</h2>
+                <p class="text-secondary-100">${content.length > 200 ? content.slice(0, 200) : content}...</p>
+            </div>
+            <div class="w-full max-w-28 h-28 ml-14">
+                <img class="w-full h-full object-cover" src="../src/assets/images/blog/blog.webp" alt="img" />
+            </div>
+        </div>
+        <div class="mt-3">
+            <span>${publicationDate}</span>
+        </div>
+    `;
+    return cardElement
+}
+
+const setupCategoryClickListener = () => {
+    // Use event delegation on a parent element that exists when the page loads
+    const blogs = document.getElementById('blog');
+    blogs.addEventListener('click', (event) => {
+        const blogCard = event.target.closest('.blog__card');
+        if(blogCard) {
+           const blogId = blogCard.dataset.id;
+           window.location.href = "blog-details.html?id=" + blogId;
+        }
+    })
+}
+
+/* getBlogData() */
+
+/* 
 // Display Namaz Niyat data in the UI
 const displayNamazData = (namazData) => {
     let namazContainer = document.getElementById('namaz');
@@ -92,4 +135,6 @@ const createTagElemnt = ({tagName, dataType}, isActive) => {
 }
 
 // Fetch Namaz Niyat data on page load
-getNamazData();
+getNamazData(); */
+/* This code for blogs */
+
