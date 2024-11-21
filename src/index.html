@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f23b08ee3a.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/f23b08ee3a.js" crossorigin="anonymous"></script> -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon/fav-icon.png">
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <title>Islamic Blog</title>
+    <title>TheIlmJourney.com</title>
 
 </head>
 
-<body>
-    <header id="header" class="fixed w-full top-0 border-b z-10">
+<body class="select-none">
+    <header id="header" class="fixed w-full top-0 border-b bg-white">
         <div class="container xl:!px-0">
             <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
                         <a class="navbar-brand text-2xl leading-none font-bold z-10"
-                            href="index.html">Islamic Blog</a>
+                            href="index.html">TheIlmJourney.com</a>
                     </div>
                     <button class="navbar-toggler p-0 border-0 lg:hidden" type="button">
                         <img id="open-menu" src="./assets/images/icons/open-menu.svg" alt="">
@@ -35,47 +34,24 @@
             </nav>
         </div>
     </header>
+
     <main>
         <!-- =======================
             Hero Start -->
-        <!-- <section id="banner">
-            <div class="container">
-                <div
-                    class=".banner h-auto pt-20 pb-[100px] lg:full-height flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-20">
-                    <div class="banner__left">
-                        <h1 class="banner__title text-center lg:text-left">Hi, I’m Abu Bakar<br>
-                            <span>Front-End</span> Developer
-                        </h1>
-                        <p class="banner__description lg:pr-8 xl:pr-0 text-center lg:text-left ">My name is abu bakar. I
-                            am a front-end developer. I love to work with react js. over the last year, I gather
-                            knowledge
-                            in various parts of web development by myself. I always try to improve my skills and
-                            knowledge base to fit with the
-                            latest technologies. My goal is to become a full-stack web developer who can make beautiful
-                            UI.
+        <!-- <section id="banner" class="border-b">
+            <div class="container xl:!px-0">
+                <div class="h-auto pt-20 lg:pb-[100px] pb-20 lg:full-height flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between">
+                    <div class="banner__left max-w-[630px]">
+                        <h1 class="banner__title text-4xl lg:text-6xl font-bold mb-6 text-center lg:text-left capitalize">Learn English online <br> for free</h1>
+                        <p class="lg:pr-8 xl:pr-0 text-center lg:text-left">Welcome to <strong>English Skills Journey</strong>! Our aim is to assist you in mastering English speaking skills,  so you can speak English fluently. so now let's start.
                         </p>
-                        <div class="social__area">
-                            <h6>Please follow me</h6>
-                            <div class="social__icon">
-                                <a class="social__link" href="https://www.facebook.com/md.bakkar.129357">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a class="social__link" href="https://github.com/abubakarsiddique10">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a class="social__link"
-                                    href="https://www.linkedin.com/in/muhammad-abu-bakar-a283b4241/">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                                <div class="social__link relative email">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span class="absolute bottom-[-25px] left-[-5px] hidden copy-text">copied</span>
-                                </div>
-                            </div>
+                        <div class="mt-3 flex gap-5 justify-center lg:justify-start flex-wrap">
+                            <a href="./speaking.html" class="font-medium underline">speaking</a>
+                            <a href="./vocab-categories.html" class="font-medium underline">vocabulary</a>
                         </div>
                     </div>
-                    <div class="banner__right">
-                        <img src="./assets/images/banner/banner-img.png" alt="banner-img">
+                    <div class="border-0 w-full max-w-[190px] flex-shrink-0 md:max-w-[300px] lg:max-w-[334px]">
+                        <img class="w-full" src="./assets/images/banner/banner.png" alt="banner-img">
                     </div>
                 </div>
             </div>
@@ -83,43 +59,257 @@
         <!-- =======================
             Hero End -->
 
-        <section>
+        <!-- speaking section start -->
+        <section id="speaking" class="border-b pt-[107px] pb-[100px]">
             <div class="container xl:!px-0">
-                <div class="lg:mt-14 lg:flex flex-row-reverse justify-between pt-10 lg:pt-0">
-                    
-                    <ul id="tags" class="max-w-[518px] sticky top-16 flex lg:block overflow-auto pt-6 lg:pt-10 w-full lg:max-w-[368px] lg:border-l lg:h-full lg:pl-10 lg:min-h-10 bg-slate-400">
-                        <!-- Category tags will be dynamically inserted here -->
-                    </ul>
+                <!--                 <div class="text-center">
+                    <img class="max-w-[100px] h-[100px] md:max-w-[110px] md:h-[110px] mx-auto"
+                        src="./assets/images/blust/Bust1.png" alt="Vocabulary Categories Image" />
+                    <h2 class="capitalize text-2xl md:text-3xl font-bold font-['Hind_Siliguri'] mt-4">একটি বিষয় নির্বাচন
+                        করুন</h2>
+                </div> -->
+                <div class="relative mx-[30px] hello">
+                    <div id="static-topics" class="flex overflow-x-auto  gap-y-16 mt-10 lg:mt-14">
+                        <a href="./namaz.html?category=surah"
+                            class="  hover:underline w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">সুরা সমূহ</span>
+                        </a>
+                        <a href="./namaz.html?category=tasbih-dowa"
+                            class=" hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">তাসবিহ ও দোয়া</span>
+                        </a>
+                        <a href="./namaz.html?category=niyat"
+                            class="hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">নামাজের নিয়ত</span>
+                        </a>
+                        <a href="./namaz.html?category=monajat"
+                            class=" hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">মোনাজাত</span>
+                        </a>
+                        <a href="./dowa.html" class="hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">মাসনুন দু'আ</span>
+                        </a>
+                        <a href="./namaz.html?category=tasbih-dowa"
+                            class=" hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">তাসবিহ ও দোয়া</span>
+                        </a>
+                        <a href="./namaz.html?category=tasbih-dowa"
+                            class=" hover:underline block w-full max-w-[190px] flex-shrink-0">
+                            <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                            <span class="text-lg capitalize text-center block">তাসবিহ ও দোয়া</span>
+                        </a>
 
-                    <div id="blog" class="w-full max-w-[728px] mt-5">
-                        <article class="blog__card border-b py-6 cursor-pointer">
-                            <div class="flex items-center">
-                                <div>
-                                    <h2 class="text-xl font-extrabold pb-2">The Future of Artificial Intelligence</h2>
-                                    <p class="text-secondary-100">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur dicta accusantium, mollitia dolorum fugit recusandae molestiae doloribus molestias aut saepe quame repellendus odio aliquam.</p>
-                                </div>
-                                <div class="w-full max-w-28 h-28 ml-14">
-                                    <img class="w-full h-full object-cover" src="../src/assets/images/blog/blog.webp" alt="img" />
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <span>20 Jun 2024</span>
-                            </div>
-                        </article>
+
+                        <!-- <a href="./speaking.html" class="hover:underline">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/double-arrow.svg" alt="">
+                        <span class="text-lg capitalize text-center block">আরো দেখুন</span>
+                    </a> -->
+                    </div>
+
+                    <button class="arrow absolute top-1/2 -left-[30px] -translate-y-1/2 p-[3px] rounded-full ">
+                        <img src="./assets/images/icons/chevron-left.svg" alt="">
+                    </button>
+                    <button class="arrow absolute top-1/2 p-[3px] -right-[30px] -translate-y-1/2  rounded-full">
+                        <img src="./assets/images/icons/chevron-right.svg" alt="">
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- <section id="speaking" class="border-b pt-[107px] pb-[100px]">
+            <div class="container xl:!px-0">
+                <div class="text-center">
+                    <img class="max-w-[100px] h-[100px] md:max-w-[110px] md:h-[110px] mx-auto"
+                        src="./assets/images/blust/Bust1.png" alt="Vocabulary Categories Image" />
+                    <h2 class="capitalize text-2xl md:text-3xl font-bold font-['Hind_Siliguri'] mt-4">একটি বিষয় নির্বাচন
+                        করুন</h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-16 mt-10 lg:mt-14">
+                    <a href="./namaz.html?category=surah" class="  hover:underline ">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">সুরা সমূহ</span>
+                    </a>
+                    <a href="./namaz.html?category=tasbih-dowa" class=" hover:underline">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">তাসবিহ ও দোয়া</span>
+                    </a>
+                    <a href="./namaz.html?category=niyat" class="hover:underline ">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">নামাজের নিয়ত</span>
+                    </a>
+                    <a href="./namaz.html?category=monajat" class=" hover:underline">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">মোনাজাত</span>
+                    </a>
+                    <a href="./dowa.html" class="hover:underline ">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">মাসনুন দু'আ</span>
+                    </a>
+                    <a href="./namaz.html?category=tasbih-dowa" class=" hover:underline">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/conversation.svg" alt="">
+                        <span class="text-lg capitalize text-center block">তাসবিহ ও দোয়া</span>
+                    </a>
+
+
+                    <a href="./speaking.html" class="hover:underline">
+                        <img class="w-[45px] mb-4 mx-auto" src="./assets/images/icons/double-arrow.svg" alt="">
+                        <span class="text-lg capitalize text-center block">আরো দেখুন</span>
+                    </a>
+                </div>
+
+            </div>
+        </section> -->
+        <!-- speaking section end -->
+
+        <!-- blog section start -->
+        <!--   <section id="speaking" class="border-b pt-[100px] pb-[140px] relative">
+            <div class="container xl:!px-">
+                <div class="flex justify-between">
+                    <h2 class="text-2xl font-semibold capitalize ">ব্লগ</h2>
+                    <a href="./blog.html" class="capitalize flex items-center gap-1">
+                        <span>আরো পড়ুন</span>
+                        <img class="w-4 mt-0.5" src="./assets/images/icons/arrow-next.svg" alt="">
+                    </a>
+                </div>
+
+
+                <div id="blog"
+                    class="w-full grid grid-cols-1 md:grid-cols-2 md:gap-x-10 md:gap-y-5 mt-10 lg:mt-8 mx-auto lg:ml-0">
+
+                </div>
+                <a href="./blog.html"
+                    class="capitalize flex items-center gap-1 absolute bottom-[70px] left-1/2 -translate-x-1/2 py-1 px-3 shadow">
+                    <span>আরো পড়ুন</span>
+                    <img class="w-4 mt-0.5" src="./assets/images/icons/arrow-next.svg" alt="">
+                </a>
+            </div>
+        </section> -->
+        <!-- blog section end -->
+
+
+    </main>
+
+
+
+    <footer class="bg-white py-6 lg:py-8">
+        <div class="container xl:!px-0">
+            <div class="md:flex md:justify-between pt-[80px]">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" /> -->
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">English
+                            Skills Journey</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- loading sppiner -->
-    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] flex justify-center items-center">
-        <span>Loading...</span>
-    </div>
+            <div
+                class="flex justify-center items-center mt-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-10 ">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Copyright © 2024 English Skills
+                    Journey. All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
 
-    <script src="./assets/js/index.js" type="module"></script>
+    <script src="./assets/js/main.js" type="module"></script>
     <script src="./assets/js/common.js" type="module"></script>
-    <script src="./assets/js/blog.js" type="module"></script>
+    <script src="./assets/js/index.js" type="module"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+<!-- vocabulary section start -->
+<!-- <section id="vocabulary" class="border-b py-[120px]">
+            <div class="container xl:!px-0">
+                <div class="mb-8 flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold capitalize ">learn vocabulary</h2>
+                    <div class="flex gap-5">
+                        <button id="left" class="arrow size-8 bg-slate-100 rounded-full flex items-center justify-center select-none">
+                            <img src="./assets/images/icons/arrow-left.svg" alt="">
+                        </button>
+                        <button id="right" class="arrow size-8 bg-slate-100 rounded-full flex items-center justify-center select-none">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div id="vocabulary_slider" class="vocabulary_slider flex gap-5 max-w-[1200px] overflow-auto scroll-smooth">
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/giraffe-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>animals</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/delivery-transport-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>transport</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/tools-hammer-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>tools</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                </div>
+            </div>
+        </section> -->
+<!-- vocabulary section end -->

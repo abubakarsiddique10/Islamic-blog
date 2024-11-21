@@ -1,83 +1,36 @@
-import { fetchData } from "./common.js";
+import {fetchData} from "./common.js";
+import { createArticleCard, setupCategoryClickListener } from "./components.js";
 
-/* NAVBAR START */
-const navbarToggler = document.querySelector('.navbar-toggler');
-const openMenu = document.getElementById('open-menu');
-const closenMenu = document.getElementById('close-menu');
-const header = document.getElementById('header');
-let isOpen = false;
-
-// Navbar active class
-const navLink = document.querySelectorAll('.nav-link');
-const navItems = document.querySelector('.nav__items')
-navLink.forEach((link) => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-active').classList.remove('nav-active')
-        link.classList?.add('nav-active')
-    })
-})
-
-navbarToggler.addEventListener('click', (e) => {
-    openMenu.style.display = e.target.id == "open-menu" ? "none" : "block";
-    closenMenu.style.display = e.target.id == "close-menu" ? "none" : "block";
-    navItems.classList.toggle('show')
-
-    isOpen = !isOpen;
-    header.classList.toggle('header__bg')
-    if (window.scrollY > 0) {
-        header.classList.add('header__bg')
-    }
-})
-// windo scroll navbar bg color change
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0 && !isOpen) {
-        header.classList.add('header__bg')
-    } else if (isOpen) {
-        header.classList.add('header__bg')
-    } else {
-        header.classList.remove('header__bg')
-    }
-})
-
-// Load MenuItem
-async function getMenuItem() {
-    const url = `././assets/data/nav/menuItem.json`;
+// Fetch Namaz Niyat data
+async function getBlogData() {
+    const url = `././assets/data/blogs/blogs.json`;
     try {
-        const menuItem = await fetchData(url);
-        displayMenuItem(menuItem)
+        const response = await fetchData(url);
+        const sliceBlog = response[1].slice(0, 4);
+        displayBlog(sliceBlog);
     } catch (error) {
-        console.error(error)
+        console.error('Error fetching Namaz Niyat data:', error);
     }
 }
-getMenuItem();
+getBlogData()
 
-// Display MenuItem in the UI
-const displayMenuItem = (menuItem) => {
-    const ul = document.getElementById('menuItem');
-    menuItem.forEach(item => {
-        const createMenuElement = createMenuItem(item)
-        ul.appendChild(createMenuElement)
+// Display Namaz Niyat data in the UI
+const displayBlog = (contents) => {
+    let blogContainer = document.getElementById('blog');
+    blogContainer.innerHTML = "";
+    contents.forEach((content) => {
+        const createBLogCard = createArticleCard(content);
+        blogContainer.appendChild(createBLogCard);
     });
+    setupCategoryClickListener()
 }
 
-// Create a menu element
-const createMenuItem = (item) => {
-    const li = document.createElement('li');
-    li.className = 'nav-item'
-    li.innerHTML = `
-        <a class="capitalize font-siliguri font-medium py-2 lg:py-0 rounded-md leading-5 text-[15px] text-[#000000cc] tracking-[-0.45px] nav-active block" aria-current="page" href="${item.link}">${item.name}
-        </a>
-    `;
-    return li
+/* const bakar = {
+    hello() {
+        console.log('hello')
+    },
 }
-/* NAVBAR END */
+console.log(bakar) */
 
 
-
-// loading sppiner
-function loading (value) {
-    const preloader = document.getElementById('preloader');
-    preloader.classList.add(`${!value && "hidden"}`)
-}
-export {loading}
 

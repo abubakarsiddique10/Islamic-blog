@@ -1,5 +1,5 @@
 import {fetchData} from "./common.js";
-import {loading} from "./index.js"
+import {loading} from "./main.js"
 
 const queryParams = new URLSearchParams(window.location.search);
 const blogId = queryParams.get('id');
@@ -21,12 +21,12 @@ async function getBlogData() {
 const blogDetailsDisplay = ({title, blogImg, content, publicationDate}) => {
     const blogDetails = document.getElementById('blog_details');
     blogDetails.innerHTML = `
-        <div class="flex items-center justify-between mb-4">
-            <h2 id="blog_title" class="text-xl font-extrabold ">${title}</h2>
+        <div class="flex items-center justify-between mb-4 space-x-5 text-left">
+            <h2 id="blog_title" class="text-2xl md:text-2xl text-[#242424] font-bold">${title}</h2>
             <span>${publicationDate}</span>
         </div>
         <img id="blog_img" src="${blogImg}" alt="">
-        <div  class="mt-6 mb-4 text-secondary-100">${content}</p>
+        <div  class="my-6 text-secondary-100">${content}
         </div>
     `
 }

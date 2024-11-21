@@ -11,7 +11,7 @@ async function getData() {
         const [tags, contents] = response;
         allDowa = contents;
         displayDowa(contents);
-        displayTag(tags)
+        /* displayTag(tags) */
     } catch (error) {
         console.error( error);
     }
@@ -34,9 +34,9 @@ const createDowaCard = ({ title, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'py-6 border-b border-[#f2f2f2]';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${title}</h3>
+        <h3 class="text-lg font-siliguri font-semibold mb-3 text-left text-secondary-100">${title}।</h3>
         <p class="text-xl mb-2 font-medium md:font-semibold text-secondary-100" dir="rtl">${arabic}</p>
-        <p class="font-normal md:font-medium text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
+        <p class="font-normal md:font-medium text-secondary-100 "><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
     `;
     return cardElement
 }
@@ -58,8 +58,8 @@ function handleTagClick(event) {
 }
 
 // Add event listener for tag clicks
-const tags = document.getElementById('tags');
-tags.addEventListener('click', handleTagClick);
+/* const tags = document.getElementById('tags');
+tags.addEventListener('click', handleTagClick); */
 
 
 

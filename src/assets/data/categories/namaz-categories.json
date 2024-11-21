@@ -13,5 +13,10 @@
         "name": "সুরা সমূহ",
         "dataValue": "surah",
         "img": "birds"
+    },
+    {
+        "name": "মোনাজাত",
+        "dataValue": "monajat",
+        "img": "birds"
     }
 ]

@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon/fav-icon.png">
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>English Infinity</title>
+    <title>Islamic Blog</title>
+
 </head>
 
 <body class="overflow-y-scroll">
@@ -33,29 +34,36 @@
             </nav>
         </div>
     </header>
-
     <main>
-        <section class="">
+        <section>
             <div class="container xl:!px-0">
-                <div class="lg:mt-14 lg:flex flex-row-reverse justify-evenly pt-10 lg:pt-0">
+                <div class="lg:mt-14 lg:flex flex-row-reverse justify-between pt-10 lg:pt-0 space-y-1">
                     
-                    <ul id="tags" class="max-w-[518px] mx-auto bg-white sticky top-14 flex lg:block overflow-auto pt-6 lg:pt-10 w-full lg:max-w-[368px] lg:border-l lg:h-full lg:pl-10 lg:min-h-10">
-                       <!-- Category tags will be dynamically inserted here -->
+                    <ul id="tags" class="max-w-[728px] sticky top-[57px] flex lg:block overflow-auto pt-7 lg:pt-10 w-full lg:max-w-[368px] xl:border-l lg:h-full lg:pl-10 lg:min-h-10 mx-auto lg:ml-0 bg-white">
+                        <!-- Category tags will be dynamically inserted here -->
                     </ul>
-                    <div id="namaz" class="w-full max-w-[516px] mx-auto lg:mx-left overflow-hidden">
-                        
+
+                    <div id="blog" class="w-full max-w-[728px] lg:pt-4 mx-auto lg:ml-0">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] flex justify-center items-center">
-        <span>Loading...</span>
+
+
+    <!-- loading sppiner -->
+    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] hidden">
+        <div class="w-full h-full flex justify-center items-center">
+            <span>Loading...</span>
+        </div>
     </div>
 
+    
     <script src="./assets/js/main.js" type="module"></script>
-    <script src="./assets/js/namaz.js" type="module"></script>
+    <script src="./assets/js/common.js" type="module"></script>
+    <script src="./assets/js/blog.js" type="module"></script>
+    
 </body>
 
 </html>

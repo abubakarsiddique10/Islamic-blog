@@ -1,5 +1,5 @@
 import { fetchData } from "./common.js";
-import { loading } from "./index.js";
+import { loading } from "./main.js";
 
 const categoriesContainer = document.getElementById('categories');
 // Function to fetch and display vocabulary categories

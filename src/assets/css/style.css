@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap');
 
 
- 
+
 /* 01. common */
 :root {
     --color-white-100: #FFFFFF;
@@ -13,6 +13,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -21,13 +22,15 @@ body {
     letter-spacing: -0.4px;
     font-style: normal;
 }
+
 .container {
     width: 100%;
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
 }
-.section__header{
+
+.section__header {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -36,45 +39,60 @@ body {
 #header {
     z-index: 100;
 }
+
 .header__bg {
     border-bottom: 1px solid rgba(71, 85, 105, 0.1);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px)
+    /*  backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px) */
 }
+
 .navbar {
     padding: 13px 0;
 }
+
 .nav-link:hover {
     color: #2B2B2B;
 }
+
 .nav-active {
     color: #2B2B2B;
 }
+
 .navbar-brand {
     font-family: "Saira Stencil One", sans-serif;
 }
+
 .navbar-brand svg {
     height: 32px;
 }
+
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
 #close-menu {
     display: none;
 }
+
 .show {
     display: block;
+}
+
+.arrow {
+    box-shadow: 0 0 .375rem rgba(0, 0, 0, .1);
 }
 
 
 /* 03. banner */
 #banner {
-   border-bottom: 1px solid #8080803b;
-   background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%);
+    border-bottom: 1px solid #8080803b;
+    background: linear-gradient(180deg, #f8fafc, rgba(242, 202, 252, .11) 34.69%, rgba(250, 198, 252, .11) 44.06%, rgba(175, 183, 255, .11) 54.48%, rgba(142, 220, 200, .07) 64.9%, #f8fafc 97.95%);
 }
+
 .banner {
     height: calc(100vh - 1px);
 }
+
 .banner__title {
     font-size: 50px;
     font-weight: 700;
@@ -82,15 +100,18 @@ body {
     line-height: 1.2;
     margin-bottom: 25px;
 }
+
 .banner__title span {
     color: var(--color-primary);
 }
+
 .banner__description {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.45px;
     margin-bottom: 35px;
 }
+
 .banner__btn span {
     color: #2B2B2B;
     text-align: center;
@@ -99,20 +120,23 @@ body {
     font-weight: 500;
     line-height: normal;
 }
+
 .banner__left {
     max-width: 625px;
     -webkit-max-width: 625px;
 }
+
 .banner__right {
-   max-width: 420px;
-   max-height: 450px;
+    max-width: 420px;
+    max-height: 450px;
 }
+
 .banner__right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     background: transparent;
-    border: 1.5px solid rgba(71,85,105,.1);
+    border: 1.5px solid rgba(71, 85, 105, .1);
 }
 
 
@@ -125,16 +149,39 @@ body {
 }
 
 
+#static-topics::-webkit-scrollbar {
+    display: none;
+}
+
+.hello {
+    
+}
+
+
 /* blog css start */
-#blog_details ol {
-    list-style: decimal;
-    margin-left: 16px;
-}
+
 #blog_details p {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
+
 #blog_details h3 {
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 600;
+    /* margin: 4px 0; */
+    /* margin-bottom: 8px; */
 }
+
+#blog_details ul li:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+#blog_details h3::first-letter {
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    #blog_details h3 {
+        /* font-size: 18px; */
+    }
+}
+
 /* blog css end */

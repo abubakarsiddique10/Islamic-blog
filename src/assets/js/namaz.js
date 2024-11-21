@@ -1,5 +1,5 @@
 import { fetchData } from "./common.js";
-import { loading } from "./index.js";
+import { loading } from "./main.js";
 const queryParams = new URLSearchParams(window.location.search);
 const category = queryParams.get('category');
 let namazNiyatData = null
@@ -44,8 +44,8 @@ const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'py-6 border-b border-[#f2f2f2]';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${subtitle}</h3>
-        <p class="text-xl mb-2 font-medium md:font-semibold text-secondary-100" dir="rtl">${arabic}</p>
+        <h3 class="text-lg font-semibold mb-3 text-center text-secondary-100">${subtitle}</h3>
+        <p class="text-lg md:text-xl mb-2 font-semibold" dir="rtl">${arabic}</p>
         <p class="font-normal md:font-medium text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return cardElement
@@ -71,8 +71,6 @@ function handleTagClick(event) {
 const tags = document.getElementById('tags');
 tags.addEventListener('click', handleTagClick);
 
-
-
 const displayTag = (contents) => {
     const tagUl = document.getElementById('tags');
     contents.forEach((content, index) => {
@@ -80,7 +78,6 @@ const displayTag = (contents) => {
         tagUl.appendChild(createTagCard);
      })
 }
-
 
 const createTagElemnt = ({tagName, dataType}, isActive) => {
     const li = document.createElement('li');
