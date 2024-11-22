@@ -6,7 +6,7 @@ let namazNiyatData = null
 
 // Fetch Namaz Niyat data
 async function getNamazData() {
-    const url = `././assets/data/namaz/${category}.json`;
+    const url = `././assets/data/namaz/namaz.json`;
     try {
         const namazData = await fetchData(url);
         namazNiyatData = namazData[1];
@@ -24,7 +24,7 @@ const displayNamazData = (namazData) => {
     let namazContainer = document.getElementById('namaz');
     namazContainer.innerText = "";
 
-    namazData.forEach(({title, contents}) => {
+    namazData.forEach(({ title, contents }) => {
         const categoryCard = document.createElement('div');
         const headingTwo = document.createElement('h2');
         headingTwo.className = 'text-xl font-semibold text-center mt-10';
@@ -32,8 +32,8 @@ const displayNamazData = (namazData) => {
         categoryCard.appendChild(headingTwo);
 
         contents.forEach((content) => {
-           const createNiyatCard = createNamazNiyatCard(content);
-           categoryCard.appendChild(createNiyatCard);
+            const createNiyatCard = createNamazNiyatCard(content);
+            categoryCard.appendChild(createNiyatCard);
         })
         namazContainer.appendChild(categoryCard)
     });
@@ -60,10 +60,10 @@ function handleTagClick(event) {
         event.target.classList.add('active');
 
         const dataType = event.target.dataset.type;
-        const filterData = dataType === "all" 
-            ? namazNiyatData 
+        const filterData = dataType === "all"
+            ? namazNiyatData
             : namazNiyatData.filter((data) => data.tag === dataType);
-            displayNamazData(filterData);
+        displayNamazData(filterData);
     }
 }
 
@@ -76,14 +76,14 @@ const displayTag = (contents) => {
     contents.forEach((content, index) => {
         const createTagCard = createTagElemnt(content, index === 0);
         tagUl.appendChild(createTagCard);
-     })
+    })
 }
 
-const createTagElemnt = ({tagName, dataType}, isActive) => {
+const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
+        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }

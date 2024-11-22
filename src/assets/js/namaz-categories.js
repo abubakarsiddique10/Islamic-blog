@@ -1,4 +1,4 @@
-import { fetchData } from "./common.js";
+/* import { fetchData } from "./common.js";
 import { loading } from "./main.js";
 
 const categoriesContainer = document.getElementById('categories');
@@ -56,4 +56,4 @@ const setupCategoryClickListener = () => {
 
 
 // Initialize the application
-document.addEventListener('DOMContentLoaded', fetchCategories)
+document.addEventListener('DOMContentLoaded', fetchCategories) */

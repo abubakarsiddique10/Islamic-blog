@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
+
+
 
 /* 01. common */
 :root {
@@ -48,14 +52,16 @@ body {
 
 .navbar {
     padding: 13px 0;
+    
 }
+
 
 .nav-link:hover {
     color: #2B2B2B;
 }
 
 .nav-active {
-    color: #2B2B2B;
+    color: #2e1616;
 }
 
 .navbar-brand {
@@ -153,9 +159,6 @@ body {
     display: none;
 }
 
-.hello {
-    
-}
 
 
 /* blog css start */
@@ -178,10 +181,10 @@ body {
     text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-    #blog_details h3 {
-        /* font-size: 18px; */
-    }
-}
 
 /* blog css end */
+
+
+#blog, #blog_details{
+    font-family: "Noto Serif Bengali", serif;
+}

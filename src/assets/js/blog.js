@@ -1,4 +1,4 @@
-import {fetchData} from "./common.js";
+import { fetchData } from "./common.js";
 import { createArticleCard, setupCategoryClickListener } from "./components.js";
 
 
@@ -37,10 +37,10 @@ function handleTagClick(event) {
         event.target.classList.add('active');
 
         const dataType = event.target.dataset.type;
-        const filterData = dataType === "all" 
-            ? allData 
+        const filterData = dataType === "all"
+            ? allData
             : allData.filter((data) => data.tags === dataType);
-            displayBlog(filterData);
+        displayBlog(filterData);
     }
 }
 
@@ -54,14 +54,18 @@ const displayTag = (contents) => {
     contents.forEach((content, index) => {
         const createTagCard = createTagElemnt(content, index === 0);
         tagUl.appendChild(createTagCard);
-     })
+    })
 }
 
-const createTagElemnt = ({tagName, dataType}, isActive) => {
-    const li = document.createElement('li');
-    li.className = 'min-w-fit'
-    li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
+const createTagElemnt = ({ tagName, dataType }, isActive) => {
+    const a = document.createElement('a');
+    a.href = dataType + '.html';
+    a.className = 'min-w-fit hover:underline w-[100px] space-y-3 flex-shrink-0 lg:w-full lg:flex items-center lg:space-y-0 lg:space-x-4';
+    a.innerHTML = `
+        <img class="w-8 mx-auto lg:w-7 lg:mx-0" src="./assets/images/banner/${dataType}.png" alt="">
+        <span class="font-siliguri text-sm font-medium text-secondary-200 text-center block lg:text-[15px] lg:text-left">${tagName}</span>
     `
-    return li
+    return a;
 }
+
+/* <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button> */
