@@ -1,20 +1,23 @@
 // Create blog article card element
 const createArticleCard = ({ id, title, subtitle, content, blogImg, publicationDate }) => {
     const cardElement = document.createElement('article');
-    cardElement.className = 'blog__card border-b py-6 cursor-pointer';
+    cardElement.className = 'blog__card border-b py-6 cursor-pointer select-none';
     cardElement.setAttribute('data-id', `${id}`)
     cardElement.innerHTML = `
         <div class="flex items-center justify-between">
-            <div>
-                <h2 class="font-siliguri text-base md:text-xl lg:text-2xl text-[#242424] font-bold pb-2">${title}</h2>
-                <p class="font-siliguri text-sm font-normal text-[#6B6B6B] lg:text-base">${subtitle.length > 105 ? subtitle.slice(0, 105) + " ..." : subtitle + "."}</p>
+            <!-- Content Section -->
+            <div class="content">
+                <h2 class="title text-base md:text-xl lg:text-2xl text-gray-900 font-bold pb-2">${title}</h2>
+                <p class="description text-[15px] font-normal text-gray-600 lg:text-base">${subtitle.length > 105 ? subtitle.slice(0, 105) + " ..." : subtitle + "."}</p>
             </div>
-            <div class="w-full max-w-[120px] h-20 sm:max-w-[160px] sm:h-[100px] ml-8 lg:ml-14">
-                <img class="w-full h-full object-cover" src="../src/assets/images/blog/blog.webp" alt="img" />
+            <!-- Image Section -->
+             <div class="image-container w-full max-w-[120px] h-20 sm:max-w-[160px] sm:h-[100px] ml-8 lg:ml-14">
+                <img class="image w-full h-full object-cover"src="./assets/images/blog/${blogImg}.webp" alt="Blog thumbnail about finding a good mentor" loading="lazy">
             </div>
         </div>
-        <div class="mt-[10px]">
-            <span class="text-[#6B6B6B] text-sm">${publicationDate}</span>
+        <!-- Date Section -->
+        <div class="date mt-2">
+            <span class="text-gray-600 text-sm">${publicationDate}</span>
         </div>
     `;
     return cardElement

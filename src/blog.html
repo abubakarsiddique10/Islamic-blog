@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f23b08ee3a.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/f23b08ee3a.js" crossorigin="anonymous"></script> -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon/fav-icon.png">
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="overflow-y-scroll">
+<body class="select-none">
     <header id="header" class="fixed w-full top-0 border-b bg-white">
         <div class="container xl:!px-0">
             <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
@@ -33,37 +33,162 @@
             </nav>
         </div>
     </header>
+
     <main>
-        <section>
+        <!-- speaking section start -->
+        <section id="speaking" class="border-b pt-[80px] pb-[100px]">
             <div class="container xl:!px-0">
-                <div class="lg:mt-14 lg:flex flex-row-reverse justify-between pt-10 lg:pt-0 space-y-1">
+                <!--                 <div class="text-center">
+                    <img class="max-w-[100px] h-[100px] md:max-w-[110px] md:h-[110px] mx-auto"
+                        src="./assets/images/blust/Bust1.png" alt="Vocabulary Categories Image" />
+                    <h2 class="capitalize text-2xl md:text-3xl font-bold font-['Hind_Siliguri'] mt-4">একটি বিষয় নির্বাচন
+                        করুন</h2>
+                </div> -->
+                <div class="relative border-b border-[#F2F2F2] pb-4 text-blur">
+                    <div id="static-topics" class="flex overflow-x-auto space-x-10">
 
-                    <div id="tags"
-                        class="max-w-[728px] sticky top-[57px] flex lg:block overflow-auto py-6 lg:pt-10 w-full lg:max-w-[368px] xl:border-l lg:h-full lg:pl-10 lg:min-h-10 mx-auto lg:ml-0 bg-white lg:space-y-3">
-                        <!-- Category tags will be dynamically inserted here -->
+                        <a href="./namaz.html?category=surah" class="hover:underline min-w-fit space-y-3 flex-shrink-0">
+                            <img class="w-8 mx-auto" src="./assets/images/banner/surah.png" alt="">
+                            <span class="text-sm capitalize text-center block font-sans">সুরা সমূহ</span>
+                        </a>
+
+                        <a href="./namaz.html" class="hover:underline min-w-fit space-y-3 flex-shrink-0">
+                            <img class="w-8 mx-auto" src="./assets/images/banner/namaz.png" alt="">
+                            <span class="text-sm capitalize text-center block font-sans">নামাজ</span>
+                        </a>
+                        <a href="./dowa.html" class="hover:underline min-w-fit space-y-3 flex-shrink-0">
+                            <img class="w-8 mx-auto" src="./assets/images/banner/dowa.png" alt="">
+                            <span class="text-sm capitalize text-center block font-sans">মাসনুন দু'আ</span>
+                        </a>
                     </div>
 
-                    <div id="blog" class="w-full max-w-[728px] lg:pt-4 mx-auto lg:ml-0">
-                    </div>
+                    <!-- <button class="arrow absolute top-1/2 -left-[30px] -translate-y-1/2 p-[3px] rounded-full ">
+                        <img src="./assets/images/icons/chevron-left.svg" alt="">
+                    </button>
+                    <button class="arrow absolute top-1/2 p-[3px] -right-[30px] -translate-y-1/2  rounded-full">
+                        <img src="./assets/images/icons/chevron-right.svg" alt="">
+                    </button> -->
+
                 </div>
+
             </div>
         </section>
     </main>
 
 
 
-    <!-- loading sppiner -->
-    <div id="preloader" class="h-screen w-full bg-white fixed top-0 z-[100] hidden">
-        <div class="w-full h-full flex justify-center items-center">
-            <span>Loading...</span>
-        </div>
-    </div>
+    <footer class="bg-white py-6 lg:py-8">
+        <div class="container xl:!px-0">
+            <div class="md:flex md:justify-between pt-[80px]">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" /> -->
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">English
+                            Skills Journey</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+            <div
+                class="flex justify-center items-center mt-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-10 ">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Copyright © 2024 English Skills
+                    Journey. All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
 
     <script src="./assets/js/main.js" type="module"></script>
     <script src="./assets/js/common.js" type="module"></script>
     <script src="./assets/js/blog.js" type="module"></script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+<!-- vocabulary section start -->
+<!-- <section id="vocabulary" class="border-b py-[120px]">
+            <div class="container xl:!px-0">
+                <div class="mb-8 flex items-center justify-between">
+                    <h2 class="text-2xl font-semibold capitalize ">learn vocabulary</h2>
+                    <div class="flex gap-5">
+                        <button id="left" class="arrow size-8 bg-slate-100 rounded-full flex items-center justify-center select-none">
+                            <img src="./assets/images/icons/arrow-left.svg" alt="">
+                        </button>
+                        <button id="right" class="arrow size-8 bg-slate-100 rounded-full flex items-center justify-center select-none">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div id="vocabulary_slider" class="vocabulary_slider flex gap-5 max-w-[1200px] overflow-auto scroll-smooth">
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/giraffe-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>animals</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/delivery-transport-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>transport</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                    <a href="#" class="border flex flex-col min-w-[200px] min-h-[200px] select-none justify-between ">
+                        <div class="flex-1 flex justify-center items-center">
+                             <img class="w-32" src="./assets/images/icons/tools-hammer-svgrepo-com.svg" alt="">
+                        </div>
+                         <h3 class="text-lg capitalize flex gap-2 items-center justify-center p-1.5 bg-[#f8f9fc]">
+                             <span>tools</span>
+                             <img class="w-4" src="./assets/images/icons/arrow-right.svg" alt="">
+                         </h3>
+                     </a>
+                </div>
+            </div>
+        </section> -->
+<!-- vocabulary section end -->

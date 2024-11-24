@@ -21,13 +21,16 @@ async function getBlogData() {
 const blogDetailsDisplay = ({ title, blogImg, content, publicationDate }) => {
     const blogDetails = document.getElementById('blog_details');
     blogDetails.innerHTML = `
-        <div class="flex items-center justify-between mb-4 space-x-5 text-left">
-            <h2 id="blog_title" class="text-2xl md:text-2xl text-[#242424] font-bold">${title}</h2>
-            <span>${publicationDate}</span>
+        <h1 id="blog_title" class="text-2xl md:text-2xl text-[#242424] font-bold mb-4">${title}</h1>
+       <figure class="mb-4">
+            <img id="blog_img" src="./assets/images/blog/${blogImg}" alt="Blog banner for ভালো মেন্টর কিভাবে খুজবেন?" class="w-full h-auto">
+        </figure>
+        <div class="flex items-center gap-2 text-gray-600">
+            <span class="font-medium">তারিখঃ</span>
+            <time" class="text-nowrap inline-block">${publicationDate}</time>
         </div>
-        <img id="blog_img" src="${blogImg}" alt="">
-        <div class="my-6 text-lg text-secondary-100 ">${content}
-        </div>
+        <article  class="my-6 text-lg text-secondary-100 ">${content}
+        </article >
     `
 }
 

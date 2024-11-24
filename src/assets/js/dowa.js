@@ -13,7 +13,7 @@ async function getData() {
         displayDowa(contents);
         /* displayTag(tags) */
     } catch (error) {
-        console.error( error);
+        console.error(error);
     }
 }
 
@@ -36,7 +36,7 @@ const createDowaCard = ({ title, arabic, pronunciation }) => {
     cardElement.innerHTML = `
         <h3 class="text-lg font-siliguri font-semibold mb-3 text-left text-secondary-100">${title}।</h3>
         <p class="text-xl mb-2 font-medium md:font-semibold text-secondary-100" dir="rtl">${arabic}</p>
-        <p class="font-normal md:font-medium text-secondary-100 "><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
+        <p class="font-normal text-secondary-100 lg:text-[17px]"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
     `;
     return cardElement
 }
@@ -50,10 +50,10 @@ function handleTagClick(event) {
         event.target.classList.add('active');
 
         const dataType = event.target.dataset.type;
-        const filterData = dataType === "all" 
-            ? allDowa 
+        const filterData = dataType === "all"
+            ? allDowa
             : allDowa.filter((data) => data.tag === dataType);
-            displayDowa(filterData);
+        displayDowa(filterData);
     }
 }
 
@@ -68,15 +68,15 @@ const displayTag = (contents) => {
     contents.forEach((content, index) => {
         const createTagCard = createTagElemnt(content, index === 0);
         tagUl.appendChild(createTagCard);
-     })
+    })
 }
 
 
-const createTagElemnt = ({tagName, dataType}, isActive) => {
+const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active": ""}" data-type="${dataType}">${tagName}</button>
+        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }

@@ -65,7 +65,7 @@ const createMenuItem = (item) => {
     const li = document.createElement('li');
     li.className = 'nav-item'
     li.innerHTML = `
-        <a class="capitalize font-siliguri font-medium py-2 lg:py-0 rounded-md leading-5 text-[15px] text-[#000000cc] tracking-[-0.45px] nav-active block" aria-current="page" href="${item.link}">${item.name}
+        <a class="capitalize font-medium lg:font-normal py-2 lg:py-0 rounded-md leading-5 lg:text-[17px] text-[#000000cc] tracking-[-0.45px] nav-active block" aria-current="page" href="${item.link}">${item.name}
         </a>
     `;
     return li
@@ -75,10 +75,10 @@ const createMenuItem = (item) => {
 
 
 // loading sppiner
-function loading (value) {
+function loading(value) {
     const preloader = document.getElementById('preloader');
     preloader.style.display = value ? "block" : "none";
 }
 
 // export loading function
-export {loading}
+export { loading }
