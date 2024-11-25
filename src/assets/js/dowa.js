@@ -34,9 +34,9 @@ const createDowaCard = ({ title, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'py-6 border-b border-[#f2f2f2]';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-siliguri font-semibold mb-3 text-left text-secondary-100">${title}।</h3>
-        <p class="text-xl mb-2 font-medium md:font-semibold text-secondary-100" dir="rtl">${arabic}</p>
-        <p class="font-normal text-secondary-100 lg:text-[17px]"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
+        <h3 class="text-lg font-semibold mb-3 text-left text-secondary-100">${title}।</h3>
+        <p class="text-lg mb-2 font-semibold" dir="rtl">${arabic}</p>
+        <p class="font-normal text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
     `;
     return cardElement
 }

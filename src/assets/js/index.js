@@ -60,12 +60,15 @@ const displayTag = (contents) => {
 const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const a = document.createElement('a');
     a.href = dataType + '.html';
-    a.className = 'min-w-fit hover:underline space-y-3 flex-shrink-0 lg:w-full lg:flex items-center lg:space-y-0 lg:space-x-4';
+    a.className = 'min-w-fit space-y-3 flex-shrink-0 lg:w-full lg:flex items-center lg:space-y-0 lg:space-x-4';
     a.innerHTML = `
-        <img class="w-8 mx-auto lg:w-7 lg:mx-0" src="./assets/images/banner/${dataType}.png" alt="">
+        <img class="select-none w-8 mx-auto lg:w-7 lg:mx-0" src="./assets/images/banner/${dataType}.png" alt="">
         <span class="text-sm font-sans font-medium text-secondary-200 text-center block lg:text-left">${tagName}</span>
     `
     return a;
 }
 
-/* <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button> */
+
+
+
+

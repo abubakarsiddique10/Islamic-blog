@@ -82,3 +82,29 @@ function loading(value) {
 
 // export loading function
 export { loading }
+
+
+/*=========================
+    tags Slide Start
+==========================*/
+const tagBody = document.getElementById('tags');
+let isdragging = false;
+
+tagBody?.addEventListener('scroll', () => {
+    tagBody.scrollWidth - tagBody.clientWidth;
+})
+
+tagBody?.addEventListener('mousemove', (e) => {
+    if (!isdragging) return;
+    tagBody.style.scrollBehavior = "auto";
+    tagBody.scrollLeft = tagBody.scrollLeft - e.movementX;
+    tagBody.style.scrollBehavior = "smooth";
+})
+
+tagBody?.addEventListener('mousedown', () => isdragging = true);
+tagBody?.addEventListener('mouseup', () => isdragging = false);
+tagBody?.addEventListener('mouseleave', () => isdragging = false);
+
+
+/* console.log('Ah, web development. When I first dove into this field, I imagined building sleek websites, solving complex problems, and getting…'.length)
+console.log('হুজুগে, বাপের হোটেল বন্ধ হয়ে যাওয়া দুর্যোগ কিংবা গুগল, মাইক্রোসফট, ফেসবুকের মতো বড় বড় কোম্পানিতে চাকরি পাওয়ার সুযোগে; যে যে কার...'.length) */

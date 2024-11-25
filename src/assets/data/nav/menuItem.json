@@ -4,16 +4,12 @@
         "link": "index.html"
     },
     {
-        "name": "ব্লগ",
-        "link": "./blog.html"
-    },
-    {
         "name": "সুরা সমূহ",
         "link": "./surah.html"
     },
     {
         "name": "নামাজ",
-        "link": "./namaz-categories.html"
+        "link": "./namaz.html"
     },
     {
         "name": "দোয়া",

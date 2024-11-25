@@ -23,13 +23,13 @@ const blogDetailsDisplay = ({ title, blogImg, content, publicationDate }) => {
     blogDetails.innerHTML = `
         <h1 id="blog_title" class="text-2xl md:text-2xl text-[#242424] font-bold mb-4">${title}</h1>
        <figure class="mb-4">
-            <img id="blog_img" src="./assets/images/blog/${blogImg}" alt="Blog banner for ভালো মেন্টর কিভাবে খুজবেন?" class="w-full h-auto">
+            <img id="blog_img" src="./assets/images/blog/${blogImg}.webp" alt="Blog banner for ভালো মেন্টর কিভাবে খুজবেন?" class="w-full h-auto">
         </figure>
-        <div class="flex items-center gap-2 text-gray-600">
+        <div class="flex items-center gap-2 text-gray-600 text-sm">
             <span class="font-medium">তারিখঃ</span>
-            <time" class="text-nowrap inline-block">${publicationDate}</time>
+            <time" class="text-nowrap">${publicationDate}</time>
         </div>
-        <article  class="my-6 text-lg text-secondary-100 ">${content}
+        <article class="my-6 text-[17px] sm:text-lg text-secondary-100 leading-7">${content}
         </article >
     `
 }

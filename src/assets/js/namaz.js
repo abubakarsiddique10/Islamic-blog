@@ -83,7 +83,7 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="font-medium text-sm md:text-base text-left py-[6px] px-3 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
+        <button class="font-medium text-[15px] md:text-base text-left py-[6px] px-3 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }
