@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap'); */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
+
 
 
 
@@ -27,7 +35,6 @@
   background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   pointer-events: none; 
 } */
-
 
 
 
@@ -64,6 +71,10 @@ body {
     margin-bottom: 50px;
 }
 
+.font-arabic {
+    font-family: "Noto Naskh Arabic", serif;
+}
+
 /* 02. header */
 #header {
     z-index: 100;
@@ -77,7 +88,6 @@ body {
 
 .navbar {
     padding: 13px 0;
-
 }
 
 
@@ -172,7 +182,10 @@ body {
 
 
 .active {
-    background-color: #f8fafc
+    /* background-color: #f8fafc; */
+    /* background-color: #f3f3f3; */
+    border-bottom: 1px solid black;
+    border-radius:0%
 }
 
 #tags::-webkit-scrollbar {
@@ -239,7 +252,12 @@ body {
 /* blog css end */
 
 
-
+@media (min-width: 1020px) {
+    .active {
+        background-color: #f8fafc;
+        border-bottom: none
+    }
+}
 
 
 

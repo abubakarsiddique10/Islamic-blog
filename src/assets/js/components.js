@@ -8,7 +8,7 @@ const createArticleCard = ({ id, title, subtitle, content, blogImg, publicationD
             <!-- Content Section -->
             <div class="content">
                 <h2 class="title text-xl md:text-2xl lg:text-2xl text-gray-900 font-bold pb-2">${title}</h2>
-                <p class="description text-[15px] font-normal text-gray-600 lg:text-base">${subtitle}</p>
+                <p class="description text-base font-normal text-gray-600 lg:text-[17px]">${subtitle}</p>
             </div>
             <!-- Image Section -->
              <div class="image-container w-full max-w-[120px] h-20 sm:max-w-[160px] sm:h-[100px] ml-8 lg:ml-14">
