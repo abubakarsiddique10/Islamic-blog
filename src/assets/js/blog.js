@@ -1,4 +1,4 @@
-import { fetchData } from "./common.js";
+/* import { fetchData } from "./common.js";
 import { createArticleCard, setupCategoryClickListener } from "./components.js";
 
 // Fetch Namaz Niyat data
@@ -29,3 +29,4 @@ const displayBlog = (contents) => {
 
 
 
+ */

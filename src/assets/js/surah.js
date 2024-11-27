@@ -33,8 +33,8 @@ const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     cardElement.className = 'py-6 border-b border-[#f2f2f2]';
     cardElement.innerHTML = `
         <h3 class="text-lg font-semibold mb-3 text-center text-secondary-100">সূরা ${subtitle}</h3>
-        <p class="font-arabic text-lg md:text-xl !leading-[30px] mb-2 font-semibold" dir="rtl">${arabic}</p>
-        <p class="font-normal text-[17px] leading-6 text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
+        <p class="font-arabic text-lg md:text-xl !leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">${arabic}</p>
+        <p class="font-normal text-lg leading-[26px] text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return cardElement
 }

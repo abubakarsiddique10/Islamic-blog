@@ -19,6 +19,7 @@ async function getBlogData() {
 }
 
 const blogDetailsDisplay = ({ title, blogImg, content, publicationDate }) => {
+
     const blogDetails = document.getElementById('blog_details');
     blogDetails.innerHTML = `
         <h1 id="blog_title" class="text-2xl md:text-2xl text-[#242424] font-bold mb-4">${title}</h1>
@@ -29,7 +30,7 @@ const blogDetailsDisplay = ({ title, blogImg, content, publicationDate }) => {
             <span class="font-medium">তারিখঃ</span>
             <time" class="text-nowrap">${publicationDate}</time>
         </div>
-        <article class="my-6 text-[17px] sm:text-lg text-secondary-100 leading-7">${content}
+        <article class="my-6 text-[17px] sm:text-lg text-secondary-100 leading-7">${content.join('')}
         </article >
     `
 }
@@ -38,3 +39,15 @@ const blogDetailsDisplay = ({ title, blogImg, content, publicationDate }) => {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', getBlogData)
+
+
+
+
+
+
+
+
+
+
+
+

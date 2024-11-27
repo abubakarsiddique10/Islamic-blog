@@ -23,6 +23,7 @@ async function getNamazData() {
 const displayNamazData = (namazData) => {
     let namazContainer = document.getElementById('namaz');
     namazContainer.innerText = "";
+    namazContainer.scrollTop = 0;
 
     namazData.forEach(({ title, contents }) => {
         const categoryCard = document.createElement('div');
@@ -46,7 +47,7 @@ const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     cardElement.innerHTML = `
         <h3 class="text-lg font-semibold mb-3 text-center text-secondary-100">${subtitle}</h3>
         <p class="font-arabic text-lg md:text-xl leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">${arabic}</p>
-        <p class="font-normal text-[17px]  text-secondary-100 leading-6"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
+        <p class="font-normal text-lg  text-secondary-100 leading-[26px]"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return cardElement
 }

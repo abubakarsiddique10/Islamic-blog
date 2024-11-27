@@ -71,4 +71,3 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
 
 
 
-

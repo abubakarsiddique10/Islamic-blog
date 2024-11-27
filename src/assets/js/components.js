@@ -1,5 +1,5 @@
 // Create blog article card element
-const createArticleCard = ({ id, title, subtitle, content, blogImg, publicationDate }) => {
+const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) => {
     const cardElement = document.createElement('article');
     cardElement.className = 'blog__card border-b py-6 cursor-pointer select-none';
     cardElement.setAttribute('data-id', `${id}`)
@@ -34,7 +34,6 @@ const setupCategoryClickListener = () => {
         }
     })
 }
-
 
 // export all components function
 export { createArticleCard, setupCategoryClickListener }
