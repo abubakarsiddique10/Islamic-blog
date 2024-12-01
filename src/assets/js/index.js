@@ -17,6 +17,7 @@ async function getBlogData() {
 }
 getBlogData()
 
+
 // Display Namaz Niyat data in the UI
 const displayBlog = (contents) => {
     let blogContainer = document.getElementById('blog');
@@ -67,7 +68,6 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
     `
     return a;
 }
-
 
 
 

@@ -676,10 +676,6 @@ video {
   margin-inline-end: 0.75rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -710,10 +706,6 @@ video {
 
 .mt-7 {
   margin-top: 1.75rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -789,6 +781,10 @@ video {
   min-width: 200px;
 }
 
+.min-w-\[80px\] {
+  min-width: 80px;
+}
+
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
@@ -818,12 +814,16 @@ video {
   max-width: 680px;
 }
 
-.max-w-\[728px\] {
-  max-width: 728px;
+.max-w-\[80px\] {
+  max-width: 80px;
 }
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-none {
+  flex: none;
 }
 
 .flex-shrink-0 {
@@ -897,6 +897,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(2.5rem * var(--tw-space-x-reverse));
   margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1001,11 +1007,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .p-0 {
@@ -1124,10 +1125,6 @@ video {
   text-align: center;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .font-\[\'Hind_Siliguri\'\] {
   font-family: 'Hind Siliguri';
 }
@@ -1171,6 +1168,19 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
 }
 
 .font-bold {
@@ -1227,6 +1237,18 @@ video {
 
 .leading-none {
   line-height: 1;
+}
+
+.leading-\[46px\] {
+  line-height: 46px;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
+.leading-\[38px\] {
+  line-height: 38px;
 }
 
 .tracking-\[-0\.45px\] {
@@ -1333,8 +1355,20 @@ video {
     height: 110px;
   }
 
+  .md\:min-w-\[160px\] {
+    min-width: 160px;
+  }
+
   .md\:max-w-\[110px\] {
     max-width: 110px;
+  }
+
+  .md\:max-w-\[150px\] {
+    max-width: 150px;
+  }
+
+  .md\:max-w-\[160px\] {
+    max-width: 160px;
   }
 
   .md\:grid-cols-2 {
@@ -1343,6 +1377,12 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:space-x-14 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:text-2xl {
@@ -1368,6 +1408,10 @@ video {
   .md\:\!leading-8 {
     line-height: 2rem !important;
   }
+
+  .md\:leading-\[30px\] {
+    line-height: 30px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1378,10 +1422,6 @@ video {
 
   .lg\:ml-0 {
     margin-left: 0px;
-  }
-
-  .lg\:ml-14 {
-    margin-left: 3.5rem;
   }
 
   .lg\:mt-10 {
@@ -1518,8 +1558,29 @@ video {
     font-size: 17px;
   }
 
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-\[40px\] {
+    font-size: 40px;
+  }
+
   .lg\:font-normal {
     font-weight: 400;
+  }
+
+  .lg\:leading-\[56px\] {
+    line-height: 56px;
+  }
+
+  .lg\:leading-\[48px\] {
+    line-height: 48px;
+  }
+
+  .lg\:leading-\[30px\] {
+    line-height: 30px;
   }
 }
 

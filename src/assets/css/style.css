@@ -200,21 +200,25 @@ body {
 
 /* blog css start */
 
-#blog_details p {
-    margin-bottom: 20px;
+ #blog_details article ul {
+    margin-bottom: 24px;
+}
+#blog_details article p {
+    margin-bottom: 24px;
 }
 
-#blog_details h2 {
+#blog_details article h2 {
     font-weight: 700;
     /* margin: 4px 0; */
     /* margin-bottom: 8px; */
-    margin-bottom: 10px;
+    /* margin: 10px 0 10px 0; */
+    margin-bottom: 5px;
     font-size: 20px;
     line-height: 28px;
 }
 
 #blog_details ul li:not(:last-child) {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 #blog_details h3::first-letter {
@@ -262,9 +266,6 @@ body {
         border-bottom: none
     }
 }
-
-
-
 
 
 

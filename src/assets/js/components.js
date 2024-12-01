@@ -4,15 +4,15 @@ const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) =>
     cardElement.className = 'blog__card border-b py-6 cursor-pointer select-none';
     cardElement.setAttribute('data-id', `${id}`)
     cardElement.innerHTML = `
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between space-x-6 md:space-x-14">
             <!-- Content Section -->
             <div class="content">
                 <h2 class="title text-xl md:text-2xl lg:text-2xl text-gray-900 font-bold pb-2">${title}</h2>
                 <p class="description text-base font-normal text-gray-600 lg:text-[17px]">${subtitle}</p>
             </div>
             <!-- Image Section -->
-             <div class="image-container w-full max-w-[120px] h-20 sm:max-w-[160px] sm:h-[100px] ml-8 lg:ml-14">
-                <img class="image w-full h-full object-cover"src="./assets/images/blog/${blogImg}.webp" alt="Blog thumbnail about finding a good mentor" loading="lazy">
+             <div class="flex-none max-w-[100px] md:max-w-[150px]">
+                <img class="image w-full h-auto"src="./assets/images/blog/${blogImg}.webp" alt="Blog thumbnail about finding a good mentor" loading="lazy">
             </div>
         </div>
         <!-- Date Section -->
@@ -22,6 +22,8 @@ const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) =>
     `;
     return cardElement
 }
+/* w-full min-w-[80px] max-w-[80px] md:min-w-[160px] md:max-w-[160px] */
+/* max-w-[120px] h-20 sm:max-w-[160px] sm:h-[100px] */
 // blog card click listener
 const setupCategoryClickListener = () => {
     // Use event delegation on a parent element that exists when the page loads
