@@ -30,11 +30,11 @@ const displayNamazData = (namazData) => {
 // Create a Namaz Niyat card element
 const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
-    cardElement.className = 'py-6 border-b border-[#f2f2f2]';
+    cardElement.className = 'py-6 border-b';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-semibold mb-3 text-center text-secondary-100">সূরা ${subtitle}</h3>
+        <h2 class="text-lg font-semibold mb-3 text-center">সূরা ${subtitle}</h2>
         <p class="font-arabic text-lg md:text-xl !leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">${arabic}</p>
-        <p class="font-normal text-lg leading-[26px] text-secondary-100"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
+        <p class="font-normal text-lg leading-[26px"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return cardElement
 }
@@ -71,7 +71,7 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="font-medium text-[15px] md:text-base text-left py-[6px] px-3 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">সূরা ${tagName}</button>
+        <button class="font-medium text-[15px] md:text-base text-left py-[6px] px-3 rounded-md block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">সূরা ${tagName}</button>
     `
     return li
 }

@@ -11,22 +11,51 @@
 </head>
 
 <body class="overflow-y-scroll">
-    <header id="header" class="fixed w-full top-0 border-b bg-white">
+    <header id="header" class="fixed w-full top-0 border-b">
         <div class="container xl:!px-0">
             <nav class="lg:flex items-center justify-between py-4 z-10 space-y-2 lg:space-y-0">
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between w-full">
                     <div class="flex items-center gap-2">
                         <a class="navbar-brand text-2xl leading-none font-bold z-10" href="index.html">TheIlmJourney</a>
                     </div>
-                    <button class="navbar-toggler p-0 border-0 lg:hidden" type="button">
-                        <img id="open-menu" src="./assets/images/icons/open-menu.svg" alt="">
-                        <img id="close-menu" src="./assets/images/icons/close-menu.svg" alt="">
-                    </button>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="mr-6">
+                            <svg id="light" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z">
+                                </path>
+                            </svg>
+                            <svg id="dark" class="hidden" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+                                </path>
+                            </svg>
+                        </button>
+                        <button class="navbar-toggler p-0 border-0 lg:hidden" type="button">
+                            <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                            <svg id="open-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="hidden lg:block nav__items font-siliguri">
-                    <ul id="menuItem" class=" flex flex-col lg:flex-row lg:space-x-8">
+
+                <div class="hidden lg:block nav__items min-w-fit">
+                    <ul id="menuItem" class="flex flex-col lg:flex-row lg:space-x-8">
                         <!-- menu item will be dynamically inserted here -->
                     </ul>
+
                 </div>
             </nav>
         </div>
@@ -37,7 +66,7 @@
                 <div class="lg:mt-14 lg:flex flex-row-reverse justify-between pt-[57px] lg:pt-0 space-y-1">
 
                     <div id="tags"
-                        class="max-w-[680px] sticky top-[57px] border-b border-[#F2F2F2] space-x-10 lg:border-b-0 flex lg:block overflow-auto py-4 lg:pt-10 w-full lg:max-w-[368px] xl:border-l lg:h-full lg:pl-10 lg:min-h-10 mx-auto lg:ml-0 bg-white lg:space-y-3 lg:space-x-0 select-none">
+                        class="max-w-[680px] sticky top-[57px] border-b space-x-10 lg:border-b-0 flex lg:block overflow-auto py-4 lg:pt-10 w-full lg:max-w-[368px] lg:h-full lg:pl-10 lg:min-h-10 mx-auto lg:ml-0 lg:space-y-3 lg:space-x-0 select-none">
                         <!-- Category tags will be dynamically inserted here -->
                     </div>
 
@@ -50,12 +79,15 @@
 
 
 
+
         <!-- testing section -->
         <section class="py-10">
 
-
         </section>
     </main>
+
+
+
 
 
 

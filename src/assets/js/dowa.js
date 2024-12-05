@@ -32,11 +32,11 @@ const displayDowa = (namazData) => {
 // Create a Namaz Niyat card element
 const createDowaCard = ({ title, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
-    cardElement.className = 'py-6 border-b border-[#f2f2f2] flex flex-col items-center';
+    cardElement.className = 'py-6 border-b flex flex-col items-center';
     cardElement.innerHTML = `
-        <h3 class="text-lg font-bold mb-3 text-center text-secondary-100">${title}।</h3>
-        <p class="font-arabic text-lg md:text-xl leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">${arabic}</p>
-        <p class="font-normal text-[17px] leading-6 text-secondary-100 text-center"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
+        <h2 class="text-lg font-bold mb-3 text-center">${title}।</h2>
+        <p class="font-arabic text-lg md:text-xl leading-[30px] md:!leading-8 mb-2 font-semibold text-center" dir="rtl">${arabic}</p>
+        <p class="font-normal text-[17px] leading-6 text-center"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
     `;
     return cardElement
 }
@@ -76,7 +76,7 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
     const li = document.createElement('li');
     li.className = 'min-w-fit'
     li.innerHTML = `
-        <button class="capitalize text-left font-siliguri font-medium py-2 px-4 rounded-md text-secondary-200 block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
+        <button class="capitalize text-left font-medium py-2 px-4 rounded-md block w-full filter-button ${isActive ? "active" : ""}" data-type="${dataType}">${tagName}</button>
     `
     return li
 }

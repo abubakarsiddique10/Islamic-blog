@@ -7,12 +7,12 @@ const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) =>
         <div class="flex items-center justify-between space-x-6 md:space-x-14">
             <!-- Content Section -->
             <div class="content">
-                <h2 class="title text-xl md:text-2xl lg:text-2xl text-gray-900 font-bold pb-2">${title}</h2>
-                <p class="description text-base font-normal text-gray-600 lg:text-[17px]">${subtitle}</p>
+                <h2 class="blog_card_title text-xl md:text-2xl lg:text-2xl font-bold pb-2">${title}</h2>
+                <p class="blog_card_description text-base font-normal lg:text-[17px]">${subtitle}</p>
             </div>
             <!-- Image Section -->
              <div class="flex-none max-w-[100px] md:max-w-[150px]">
-                <img class="image w-full h-auto"src="./assets/images/blog/${blogImg}.webp" alt="Blog thumbnail about finding a good mentor" loading="lazy">
+                <img class="image w-full h-auto"src="${blogImg}" alt="Blog thumbnail about finding a good mentor" loading="lazy">
             </div>
         </div>
         <!-- Date Section -->

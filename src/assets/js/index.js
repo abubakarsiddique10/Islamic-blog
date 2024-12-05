@@ -9,7 +9,7 @@ async function getBlogData() {
     try {
         const response = await fetchData(url);
         allData = response[1]
-        displayBlog(response[1]);
+        displayBlog(response[1].reverse());
         displayTag(response[0]);
     } catch (error) {
         console.error('Error fetching Namaz Niyat data:', error);
@@ -64,7 +64,7 @@ const createTagElemnt = ({ tagName, dataType }, isActive) => {
     a.className = 'min-w-fit space-y-2 flex-shrink-0 lg:w-full lg:flex items-center lg:space-y-0 lg:space-x-4';
     a.innerHTML = `
         <img class="select-none w-8 mx-auto lg:w-7 lg:mx-0" src="./assets/images/banner/${dataType}.png" alt="">
-        <span class="text-sm font-sans font-medium text-secondary-200 text-center block lg:text-left">${tagName}</span>
+        <span class="tag_title text-sm font-sans font-medium text-center block lg:text-left">${tagName}</span>
     `
     return a;
 }
