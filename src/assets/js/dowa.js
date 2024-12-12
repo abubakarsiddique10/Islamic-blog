@@ -1,4 +1,5 @@
 import { fetchData } from "./common.js";
+import { loading } from "./main.js";
 const queryParams = new URLSearchParams(window.location.search);
 const category = queryParams.get('category');
 let allDowa = null
@@ -7,10 +8,12 @@ let allDowa = null
 async function getData() {
     const url = `././assets/data/dowa/dowa.json`;
     try {
+        loading(true)
         const response = await fetchData(url);
         const [tags, contents] = response;
         allDowa = contents;
         displayDowa(contents);
+        loading(false)
         /* displayTag(tags) */
     } catch (error) {
         console.error(error);
@@ -36,7 +39,7 @@ const createDowaCard = ({ title, arabic, pronunciation }) => {
     cardElement.innerHTML = `
         <h2 class="text-lg font-bold mb-3 text-center">${title}।</h2>
         <p class="font-arabic text-lg md:text-xl leading-[30px] md:!leading-8 mb-2 font-semibold text-center" dir="rtl">${arabic}</p>
-        <p class="font-normal text-[17px] leading-6 text-center"><strong>উচ্চারণঃ </strong>${pronunciation}।</p>
+        <p class="font-normal text-[17px] leading-6 text-center"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;
     return cardElement
 }

@@ -6,6 +6,7 @@ let namazNiyatData = null
 async function getNamazData() {
     const url = `././assets/data/surah/surah.json`;
     try {
+        loading(true)
         const namazData = await fetchData(url);
         namazNiyatData = namazData[1];
         displayNamazData(namazData[1]);
@@ -32,7 +33,8 @@ const createNamazNiyatCard = ({ subtitle, arabic, pronunciation }) => {
     const cardElement = document.createElement('div');
     cardElement.className = 'py-6 border-b';
     cardElement.innerHTML = `
-        <h2 class="text-lg font-semibold mb-3 text-center">সূরা ${subtitle}</h2>
+        <h2 class="text-lg font-semibold mb-2 text-center">সূরা ${subtitle}</h2>
+        <p class="font-arabic text-center text-lg md:text-xl !leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
         <p class="font-arabic text-lg md:text-xl !leading-[30px] md:!leading-8 mb-2 font-semibold" dir="rtl">${arabic}</p>
         <p class="font-normal text-lg leading-[26px"><strong>উচ্চারণঃ </strong>${pronunciation}</p>
     `;

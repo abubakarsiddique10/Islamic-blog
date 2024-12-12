@@ -1,16 +1,18 @@
 import { fetchData } from "./common.js";
 import { createArticleCard, setupCategoryClickListener } from "./components.js";
-
+import { loading } from './main.js'
 
 let allData = null;
 // Fetch Namaz Niyat data
 async function getBlogData() {
     const url = `././assets/data/blogs/blogs.json`;
     try {
+        loading(true)
         const response = await fetchData(url);
         allData = response[1]
         displayBlog(response[1].reverse());
         displayTag(response[0]);
+        loading(false)
     } catch (error) {
         console.error('Error fetching Namaz Niyat data:', error);
     }

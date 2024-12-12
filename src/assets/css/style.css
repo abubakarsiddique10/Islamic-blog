@@ -62,13 +62,13 @@ bgcard: #1B1F23
     --background-color: #FFFFFF;
     --text-color: #242424;
     
-
+    --date-color: #4b5563;
     --text-gray-900: #111827;
     --text-gray-600: #4b5563;
     --text-black-100: #080404cc;
     --border-color-100: #e5e7eb;
     --border-color-200: #f2f2f2;
-    /* --active-bg-color: #f8fafc; */
+    --active-bg-color: #f8fafc;
     --tag-border: #f2f2f2;
     --active-border: black;
 }
@@ -79,13 +79,14 @@ bgcard: #1B1F23
     --background-color: #252728;
     --text-color: #e2e5e9;
 
+    --date-color: #b0b3b8;
     --text-gray-900: white;
     --text-gray-600: white;
     --text-black-100: white;
     /* --border-color-100: #65686c; */
     --border-color-200: #65686c;
     --tag-border: #65686c;
-    --active-bg-color: transparent;
+    --active-bg-color: #1B1F23;
     --active-border: #e2e5e9;
 }
 
@@ -129,6 +130,14 @@ body {
 
 .font-arabic {
     font-family: "Noto Naskh Arabic", serif;
+}
+#preloader {
+    background: var(--background-color);
+}
+#preloader span {
+  line-height: 100vh;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* 02. header */
@@ -334,6 +343,9 @@ body {
     -webkit-line-clamp: 6;
     color: var(--text-gray-900);
 }
+.published_data {
+    color: var(--date-color);
+}
 
 /* blog css end */
 
@@ -341,6 +353,8 @@ body {
 @media (min-width: 1020px) {
     .active {
         /* background-color: var(--active-bg-color); */
-        border-bottom: none
+        border-bottom: none;
+        background: var(--active-bg-color)
     }
 }
+

@@ -1,5 +1,5 @@
 // Create blog article card element
-const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) => {
+const createArticleCard = ({ id, title, subtitle, blogImg, publishedDate }) => {
     const cardElement = document.createElement('article');
     cardElement.className = 'blog__card border-b py-6 cursor-pointer select-none';
     cardElement.setAttribute('data-id', `${id}`)
@@ -17,7 +17,7 @@ const createArticleCard = ({ id, title, subtitle, blogImg, publicationDate }) =>
         </div>
         <!-- Date Section -->
         <div class="date mt-2">
-            <span class="text-gray-600 text-sm">${publicationDate}</span>
+            <span class="published_data text-sm">${publishedDate}</span>
         </div>
     `;
     return cardElement

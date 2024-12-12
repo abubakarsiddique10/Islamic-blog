@@ -8,6 +8,7 @@ let namazNiyatData = null
 async function getNamazData() {
     const url = `././assets/data/namaz/namaz.json`;
     try {
+        loading(true)
         const namazData = await fetchData(url);
         namazNiyatData = namazData[1];
         displayNamazData(namazData[1]);
